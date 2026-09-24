@@ -1,2180 +1,1153 @@
 <!DOCTYPE html>
 <html lang="fr">
-
 <head>
   <meta charset="UTF-8">
-
-  <meta
-    name="viewport"
-    content="width=device-width, initial-scale=1.0"
-  >
-
-  <meta
-    name="theme-color"
-    content="#020914"
-  >
-
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>EAH Diving</title>
+  <meta name="description" content="EAH Diving - grading, blazons, population, spots, actualités et dépôt de grading.">
+  <meta name="theme-color" content="#02111f">
 
-  <meta
-    name="description"
-    content="EAH Diving - grading, blazons, population, spots et disciplines."
-  >
-
-  <link
-    rel="preconnect"
-    href="https://fonts.googleapis.com"
-  >
-
-  <link
-    rel="preconnect"
-    href="https://fonts.gstatic.com"
-    crossorigin
-  >
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
   <link
     href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
     rel="stylesheet"
   >
 
-  <link
-    rel="stylesheet"
-    href="style.css"
-  >
+  <link rel="stylesheet" href="style.css">
 </head>
-
-
 <body>
 
-<!-- Effets eau -->
-<div
-  class="water-fx"
-  aria-hidden="true"
->
-  <span></span>
-  <span></span>
-  <span></span>
-  <span></span>
-  <span></span>
-  <span></span>
-</div>
-
-
-<!-- ====================================================== -->
-<!-- HEADER -->
-<!-- ====================================================== -->
-
-<header class="header">
-
-  <a
-    href="#accueil"
-    class="logo"
-    data-page="accueil"
-  >
-
-    <img
-      src="logo-eah-diving.png"
-      alt="Logo EAH Diving"
-    >
-
-    <div>
-      <strong>EAH</strong>
-      <span>DIVING</span>
-    </div>
-
-  </a>
-
-
-  <button
-    class="mobile-menu"
-    id="mobileMenu"
-    type="button"
-    aria-label="Ouvrir le menu"
-  >
-    ☰
-  </button>
-
-
-  <nav id="navigation">
-
-    <a
-      href="#grading"
-      data-page="grading"
-    >
-      Le grading
-    </a>
-
-    <a
-      href="#blazons"
-      data-page="blazons"
-    >
-      Blazons
-    </a>
-
-    <a
-      href="#population"
-      data-page="population"
-    >
-      Population
-    </a>
-
-    <a
-      href="#spots"
-      data-page="spots"
-    >
-      Spots
-    </a>
-
-    <a
-      href="#tarifs"
-      data-page="tarifs"
-    >
-      Tarifs
-    </a>
-
-
-    <div class="dropdown">
-
-      <button type="button">
-        Disciplines ▾
-      </button>
-
-
-      <div class="dropdown-content">
-
-        <a
-          href="#olympique"
-          data-page="olympique"
-        >
-          Plongeon olympique
-        </a>
-
-        <a
-          href="#freestyle"
-          data-page="freestyle"
-        >
-          Freestyle / Døds
-        </a>
-
-        <a
-          href="#highdiving"
-          data-page="highdiving"
-        >
-          High Diving
-        </a>
-
-        <a
-          href="#ange"
-          data-page="ange"
-        >
-          Saut de l'ange
-        </a>
-
-      </div>
-
-    </div>
-
-
-    <a
-      href="#faire-grader"
-      data-page="faire-grader"
-      class="button small"
-    >
-      Faire grader
-    </a>
-
-  </nav>
-
-</header>
-
-
-<main>
-
-<!-- ====================================================== -->
-<!-- ACCUEIL -->
-<!-- ====================================================== -->
-
-<section
-  id="accueil"
-  class="page active"
->
-
-  <section class="hero">
-
-    <img
-      src="hero-divers-group.png"
-      class="hero-image"
-      alt="EAH Diving"
-    >
-
-    <div class="hero-overlay"></div>
-
-    <div class="hero-content">
-
-      <span class="badge">
-        EAH DIVING
-      </span>
-
-      <h1>
-        Le plongeon.<br>
-        <span>Mesuré autrement.</span>
-      </h1>
-
-      <p>
-        Un système de grading pensé pour rendre
-        la progression lisible, structurée
-        et valorisante.
-      </p>
-
-
-      <div class="buttons">
-
-        <a
-          href="#faire-grader"
-          data-page="faire-grader"
-          class="button"
-        >
-          Faire grader un plongeon
-        </a>
-
-        <a
-          href="#grading"
-          data-page="grading"
-          class="button secondary"
-        >
-          Comprendre le grading
-        </a>
-
-      </div>
-
-    </div>
-
-  </section>
-
-
-  <section class="container section">
-
-    <span class="overline">
-      DISCIPLINES
-    </span>
-
-    <h2>
-      Plusieurs pratiques.<br>
-      Un standard EAH.
-    </h2>
-
-
-    <div class="discipline-grid">
-
-      <!-- OLYMPIQUE -->
-
-      <article
-        class="image-card"
-        data-open="olympique"
-      >
-
-        <img
-          src="discipline-olympique-new.jpg"
-          alt="Plongeon olympique"
-        >
-
-        <div>
-
-          <small>
-            DISCIPLINE 01
-          </small>
-
-          <h3>
-            Plongeon olympique
-          </h3>
-
-          <p>
-            Technique, impulsion, rotations,
-            positions et entrée à l'eau.
-          </p>
-
-          <strong>
-            Découvrir →
-          </strong>
-
-        </div>
-
-      </article>
-
-
-      <!-- FREESTYLE -->
-
-      <article
-        class="image-card"
-        data-open="freestyle"
-      >
-
-        <img
-          src="hero-divers-group.png"
-          alt="Freestyle et Døds"
-        >
-
-        <div>
-
-          <small>
-            DISCIPLINE 02
-          </small>
-
-          <h3>
-            Freestyle / Døds
-          </h3>
-
-          <p>
-            Style, contrôle, amplitude
-            et codes spécifiques.
-          </p>
-
-          <strong>
-            Découvrir →
-          </strong>
-
-        </div>
-
-      </article>
-
-
-      <!-- HIGH DIVING -->
-
-      <article
-        class="image-card"
-        data-open="highdiving"
-      >
-
-        <img
-          src="hero-diver-vertical.jpg"
-          alt="High Diving"
-        >
-
-        <div>
-
-          <small>
-            DISCIPLINE 03
-          </small>
-
-          <h3>
-            High Diving
-          </h3>
-
-          <p>
-            Hauteur, difficulté,
-            maîtrise aérienne et entrée.
-          </p>
-
-          <strong>
-            Découvrir →
-          </strong>
-
-        </div>
-
-      </article>
-
-
-      <!-- ANGE -->
-
-      <article
-        class="image-card"
-        data-open="ange"
-      >
-
-        <img
-          src="hero-high-diving.png"
-          alt="Saut de l'ange"
-        >
-
-        <div>
-
-          <small>
-            DISCIPLINE 04
-          </small>
-
-          <h3>
-            Saut de l'ange
-          </h3>
-
-          <p>
-            Trajectoire, posture
-            et maîtrise de l'entrée.
-          </p>
-
-          <strong>
-            Découvrir →
-          </strong>
-
-        </div>
-
-      </article>
-
-    </div>
-
-  </section>
-
-
-  <section class="container section">
-
-    <div class="premium-panel">
-
-      <span class="overline">
-        EAH GRADING
-      </span>
-
-      <h2>
-        De la vidéo au Grade Report.
-      </h2>
-
-      <p>
-        Une évaluation structurée autour de trois
-        grandes phases : Takeoff, Trick et Entry.
-      </p>
-
-
-      <div class="metrics">
-
-        <div>
-          <strong>D</strong>
-          <span>Takeoff / Départ</span>
-        </div>
-
-        <div>
-          <strong>T</strong>
-          <span>Trick / Phase aérienne</span>
-        </div>
-
-        <div>
-          <strong>E</strong>
-          <span>Entry / Entrée</span>
-        </div>
-
-      </div>
-
-    </div>
-
-  </section>
-
-</section>
-
-
-<!-- ====================================================== -->
-<!-- GRADING -->
-<!-- ====================================================== -->
-
-<section
-  id="grading"
-  class="page"
->
-
-  <section class="page-hero">
-
-    <img
-      src="hero-diver-vertical.jpg"
-      alt="Grading EAH Diving"
-    >
-
-    <div class="hero-overlay"></div>
-
-
-    <div class="page-title">
-
-      <span class="badge">
-        MÉTHODE EAH
-      </span>
-
-      <h1>
-        Le <span>grading</span>
-      </h1>
-
-      <p>
-        Clique sur D, T ou E pour consulter
-        la fiche complète correspondant
-        à chaque phase de notation.
-      </p>
-
-    </div>
-
-  </section>
-
-
-  <section class="container section">
-
-    <span class="overline">
-      LES 3 CRITÈRES
-    </span>
-
-    <h2>
-      Une lecture simple.<br>
-      Une analyse détaillée.
-    </h2>
-
-
-    <div class="grading-grid">
-
-      <!-- D -->
-
-      <article
-        class="grading-card"
-        data-sheet="D"
-      >
-
-        <div class="letter">
-          D
-        </div>
-
-        <span class="grading-name">
-          TAKEOFF
-        </span>
-
-        <h3>
-          Départ
-        </h3>
-
-        <p>
-          Impulsion, trajectoire,
-          coordination et préparation.
-        </p>
-
-        <strong class="click-more">
-          Voir la grille →
-        </strong>
-
-      </article>
-
-
-      <!-- T -->
-
-      <article
-        class="grading-card"
-        data-sheet="T"
-      >
-
-        <div class="letter">
-          T
-        </div>
-
-        <span class="grading-name">
-          TRICK
-        </span>
-
-        <h3>
-          Phase aérienne
-        </h3>
-
-        <p>
-          Rotations, lignes,
-          maîtrise du corps et continuité.
-        </p>
-
-        <strong class="click-more">
-          Voir la grille →
-        </strong>
-
-      </article>
-
-
-      <!-- E -->
-
-      <article
-        class="grading-card"
-        data-sheet="E"
-      >
-
-        <div class="letter">
-          E
-        </div>
-
-        <span class="grading-name">
-          ENTRY
-        </span>
-
-        <h3>
-          Entrée
-        </h3>
-
-        <p>
-          Angle, axe, alignement
-          et contrôle final.
-        </p>
-
-        <strong class="click-more">
-          Voir la grille →
-        </strong>
-
-      </article>
-
-    </div>
-
-
-    <div class="premium-panel calculation-panel">
-
-      <span class="overline">
-        RÈGLE DE CALCUL
-      </span>
-
-      <h2>
-        Comment est calculée la note ?
-      </h2>
-
-
-      <div class="calculation-steps">
-
-        <div class="calculation-step">
-
-          <span>01</span>
-
-          <div>
-            <h3>Chaque phase est notée sur 10</h3>
-
-            <p>
-              D, T et E disposent chacune de
-              cinq éléments d'évaluation.
-            </p>
-          </div>
-
-        </div>
-
-
-        <div class="calculation-step">
-
-          <span>02</span>
-
-          <div>
-            <h3>5 items × 2 points</h3>
-
-            <p>
-              Chaque item peut apporter jusqu'à
-              2 points. Un critère totalement
-              validé atteint donc 10/10.
-            </p>
-          </div>
-
-        </div>
-
-
-        <div class="calculation-step">
-
-          <span>03</span>
-
-          <div>
-            <h3>Moyenne des trois phases</h3>
-
-            <p>
-              Note globale =
-              <strong>(D + T + E) ÷ 3</strong>.
-            </p>
-          </div>
-
-        </div>
-
-
-        <div class="calculation-step">
-
-          <span>04</span>
-
-          <div>
-            <h3>Résultat EAH</h3>
-
-            <p>
-              La moyenne peut être arrondie
-              à l'entier le plus proche pour
-              correspondre à l'échelle EAH
-              de 0 à 10.
-            </p>
-          </div>
-
-        </div>
-
-      </div>
-
-
-      <div class="formula">
-
-        <span>Exemple</span>
-
-        <strong>
-          D 7 + T 8 + E 6 = 21
-        </strong>
-
-        <strong>
-          21 ÷ 3 = 7 / 10
-        </strong>
-
-      </div>
-
-    </div>
-
-  </section>
-
-</section>
-
-
-<!-- ====================================================== -->
-<!-- BLAZONS -->
-<!-- ====================================================== -->
-
-<section
-  id="blazons"
-  class="page"
->
-
-  <section class="page-hero">
-
-    <img
-      src="hero-divers-group.png"
-      alt="Blazons EAH Diving"
-    >
-
-    <div class="hero-overlay"></div>
-
-
-    <div class="page-title">
-
-      <span class="badge">
-        PROGRESSION EAH
-      </span>
-
-      <h1>
-        Les <span>blazons</span>
-      </h1>
-
-      <p>
-        Quatre niveaux pour matérialiser
-        et valoriser la progression.
-      </p>
-
-    </div>
-
-  </section>
-
-
-  <section class="container section">
-
-    <div class="blazon-grid">
-
-
-      <article class="blazon-card">
-
-        <img
-          src="blazon-bronze.png"
-          alt="Blazon Bronze EAH Diving"
-        >
-
-        <h3>
-          Bronze
-        </h3>
-
-        <p>
-          Premier niveau du parcours
-          de progression EAH.
-        </p>
-
-      </article>
-
-
-      <article class="blazon-card">
-
-        <img
-          src="blazon-silver.png"
-          alt="Blazon Silver EAH Diving"
-        >
-
-        <h3>
-          Silver
-        </h3>
-
-        <p>
-          Progression confirmée
-          et maîtrise plus importante.
-        </p>
-
-      </article>
-
-
-      <article class="blazon-card">
-
-        <img
-          src="blazon-gold.png"
-          alt="Blazon Or EAH Diving"
-        >
-
-        <h3>
-          Or
-        </h3>
-
-        <p>
-          Niveau avancé de maîtrise
-          et d'exécution.
-        </p>
-
-      </article>
-
-
-      <article class="blazon-card">
-
-        <img
-          src="blazon-legend.png"
-          alt="Blazon Legend EAH Diving"
-        >
-
-        <h3>
-          Legend
-        </h3>
-
-        <p>
-          Le niveau supérieur
-          du parcours EAH Diving.
-        </p>
-
-      </article>
-
-    </div>
-
-
-    <div class="premium-panel">
-
-      <span class="overline">
-        PROGRESSION
-      </span>
-
-      <h2>
-        Le blazon représente
-        une progression globale.
-      </h2>
-
-      <p>
-        L'obtention d'un blazon dépend
-        du nombre de plongeons validés,
-        de la diversité des groupes,
-        des notes obtenues
-        et de la difficulté atteinte.
-      </p>
-
-    </div>
-
-  </section>
-
-</section>
-
-
-<!-- ====================================================== -->
-<!-- POPULATION -->
-<!-- ====================================================== -->
-
-<section
-  id="population"
-  class="page"
->
-
-  <section class="page-hero">
-
-    <img
-      src="hero-divers-group.png"
-      alt="Population EAH Diving"
-    >
-
-    <div class="hero-overlay"></div>
-
-
-    <div class="page-title">
-
-      <span class="badge">
-        RÉFÉRENTIEL EAH
-      </span>
-
-      <h1>
-        Population
-      </h1>
-
-      <p>
-        Recherche un plongeon grâce à son nom,
-        son code, sa discipline ou son groupe.
-      </p>
-
-    </div>
-
-  </section>
-
-
-  <section class="container section">
-
-    <div class="population-intro premium-panel">
-
-      <span class="overline">
-        COMMENT ÇA MARCHE ?
-      </span>
-
-      <h2>
-        Explorer la population
-        d'un plongeon.
-      </h2>
-
-      <p>
-        Clique sur le nom d'un plongeon
-        pour afficher sa fiche complète :
-        caractéristiques, discipline,
-        groupe, hauteurs référencées
-        et statistiques EAH.
-      </p>
-
-      <p>
-        Les statistiques peuvent ensuite
-        être alimentées automatiquement
-        à partir des Grade Reports validés.
-      </p>
-
-    </div>
-
-
-    <div class="population-tool">
-
-      <div class="search-grid">
-
-        <label>
-          <span>Nom ou code</span>
-
-          <input
-            id="searchDive"
-            type="text"
-            placeholder="Ex : 5152B, Døds, saut de l'ange..."
-          >
-        </label>
-
-
-        <label>
-
-          <span>Discipline</span>
-
-          <select id="disciplineFilter">
-
-            <option value="">
-              Toutes
-            </option>
-
-            <option value="Plongeon olympique">
-              Plongeon olympique
-            </option>
-
-            <option value="Freestyle / Døds">
-              Freestyle / Døds
-            </option>
-
-            <option value="High Diving">
-              High Diving
-            </option>
-
-            <option value="Saut de l'ange">
-              Saut de l'ange
-            </option>
-
-          </select>
-
-        </label>
-
-
-        <label>
-
-          <span>Groupe</span>
-
-          <select id="groupFilter">
-
-            <option value="">
-              Tous
-            </option>
-
-          </select>
-
-        </label>
-
-      </div>
-
-
-      <div id="populationResults"></div>
-
-    </div>
-
-  </section>
-
-</section>
-
-
-<!-- ====================================================== -->
-<!-- SPOTS -->
-<!-- ====================================================== -->
-
-<section
-  id="spots"
-  class="page"
->
-
-  <section class="page-hero">
-
-    <img
-      src="hero-diver-vertical.jpg"
-      alt="Spots EAH Diving"
-    >
-
-    <div class="hero-overlay"></div>
-
-
-    <div class="page-title">
-
-      <span class="badge">
-        RÉFÉRENTIEL TERRAIN
-      </span>
-
-      <h1>
-        Spots
-      </h1>
-
-      <p>
-        Découvre les spots référencés
-        dans l'univers EAH Diving.
-      </p>
-
-    </div>
-
-  </section>
-
-
-  <section class="container section spots-list">
-
-
-    <!-- TROU DU SOUFFLEUR -->
-
-    <article class="spot">
-
-      <div class="spot-picture">
-
-        <img
-          src="spot-trou-du-souffleur.jpg"
-          alt="Trou du Souffleur"
-        >
-
-      </div>
-
-
-      <div class="spot-content">
-
-        <span class="overline">
-          CASSIS
-        </span>
-
-        <h2>
-          Trou du Souffleur
-        </h2>
-
-
-        <div class="tags">
-
-          <span>≈ 21 m</span>
-          <span>High Diving</span>
-          <span>Spot naturel</span>
-
-        </div>
-
-
-        <p>
-          Fiche EAH Diving d'un spot naturel
-          pouvant accueillir des performances
-          en grande hauteur.
-        </p>
-
-
-        <div class="warning">
-          La hauteur et les conditions doivent
-          être vérifiées sur place. Une fiche EAH
-          ne constitue jamais une validation permanente
-          de la sécurité d'un spot.
-        </div>
-
-      </div>
-
-    </article>
-
-
-    <!-- PONTE BROLLA -->
-
-    <article class="spot">
-
-      <div class="spot-picture">
-
-        <img
-          src="spot-ponte-brolla.jpg"
-          alt="Ponte Brolla"
-        >
-
-      </div>
-
-
-      <div class="spot-content">
-
-        <span class="overline">
-          SPOT EAH
-        </span>
-
-        <h2>
-          Ponte Brolla
-        </h2>
-
-
-        <div class="tags">
-
-          <span>18 m</span>
-          <span>High Diving</span>
-          <span>Spot naturel</span>
-
-        </div>
-
-
-        <p>
-          Référence enregistrée à 18 mètres.
-          La fiche pourra être enrichie avec
-          des informations de départ,
-          d'accès et de contexte.
-        </p>
-
-
-        <div class="warning">
-          Vérification indépendante indispensable
-          de la profondeur, du niveau de l'eau,
-          des obstacles, de l'accès
-          et des conditions du jour.
-        </div>
-
-      </div>
-
-    </article>
-
-
-    <!-- TROU DU DIABLE -->
-
-    <article class="spot">
-
-      <div class="spot-picture">
-
-        <img
-          src="spot-trou-du-diable.jpg"
-          alt="Trou du Diable"
-        >
-
-      </div>
-
-
-      <div class="spot-content">
-
-        <span class="overline">
-          SPOT EAH
-        </span>
-
-        <h2>
-          Trou du Diable
-        </h2>
-
-
-        <div class="tags">
-
-          <span>19 m</span>
-          <span>High Diving</span>
-          <span>Spot naturel</span>
-
-        </div>
-
-
-        <p>
-          Référence enregistrée à 19 mètres.
-          Cette fiche pourra évoluer
-          avec les informations disponibles.
-        </p>
-
-
-        <div class="warning">
-          Les caractéristiques naturelles
-          d'un spot peuvent changer.
-          Une vérification sur place reste nécessaire.
-        </div>
-
-      </div>
-
-    </article>
-
-
-    <!-- PONT NEUF -->
-
-    <article class="spot">
-
-      <div class="spot-picture">
-
-        <img
-          src="spot-pont-neuf.jpg"
-          alt="Pont Neuf"
-        >
-
-      </div>
-
-
-      <div class="spot-content">
-
-        <span class="overline">
-          SPOT EAH
-        </span>
-
-        <h2>
-          Pont Neuf
-        </h2>
-
-
-        <div class="tags">
-
-          <span>27 m</span>
-          <span>High Diving</span>
-          <span>Grande hauteur</span>
-
-        </div>
-
-
-        <p>
-          Référence enregistrée à 27 mètres.
-          Cette fiche permet de distinguer
-          clairement les performances
-          réalisées à grande hauteur.
-        </p>
-
-
-        <div class="warning">
-          Une hauteur importante implique
-          des risques majeurs. Les conditions,
-          autorisations et caractéristiques du site
-          doivent être vérifiées indépendamment.
-        </div>
-
-      </div>
-
-    </article>
-
-  </section>
-
-</section>
-
-
-<!-- ====================================================== -->
-<!-- TARIFS -->
-<!-- ====================================================== -->
-
-<section
-  id="tarifs"
-  class="page"
->
-
-  <section class="page-hero">
-
-    <img
-      src="hero-divers-group.png"
-      alt="Tarifs EAH Diving"
-    >
-
-    <div class="hero-overlay"></div>
-
-
-    <div class="page-title">
-
-      <span class="badge">
-        EAH DIVING
-      </span>
-
-      <h1>
-        Tarifs
-      </h1>
-
-      <p>
-        Grading, Grade Report
-        et carte EAH Diving.
-      </p>
-
-    </div>
-
-  </section>
-
-
-  <section class="container section">
-
-    <div class="price-grid">
-
-
-      <article class="price-card">
-
-        <small>
-          GRADING
-        </small>
-
-        <h3>
-          Vidéo supplémentaire
-        </h3>
-
-        <div class="price">
-          À définir
-        </div>
-
-        <p>
-          Analyse et Grade Report
-          pour une vidéo.
-        </p>
-
-        <ul>
-          <li>Analyse EAH</li>
-          <li>Notes D / T / E</li>
-          <li>Note finale</li>
-          <li>Critères à améliorer</li>
-        </ul>
-
-      </article>
-
-
-      <article class="price-card featured">
-
-        <small>
-          PACK
-        </small>
-
-        <h3>
-          Profil + carte
-        </h3>
-
-        <div class="price">
-          À définir
-        </div>
-
-        <p>
-          Création du profil
-          et support EAH Diving.
-        </p>
-
-        <ul>
-          <li>Profil EAH</li>
-          <li>Carte physique</li>
-          <li>Grade Reports</li>
-          <li>Suivi de progression</li>
-        </ul>
-
-      </article>
-
-
-      <article class="price-card">
-
-        <small>
-          PHYSIQUE
-        </small>
-
-        <h3>
-          Carte EAH
-        </h3>
-
-        <div class="price">
-          À définir
-        </div>
-
-        <p>
-          Carte personnalisée
-          liée au profil EAH Diving.
-        </p>
-
-        <ul>
-          <li>Nom du plongeur</li>
-          <li>Référence EAH</li>
-          <li>Profil associé</li>
-          <li>Design premium</li>
-        </ul>
-
-      </article>
-
-    </div>
-
-  </section>
-
-</section>
-
-
-<!-- ====================================================== -->
-<!-- FAIRE GRADER -->
-<!-- ====================================================== -->
-
-<section
-  id="faire-grader"
-  class="page"
->
-
-  <section class="page-hero">
-
-    <img
-      src="hero-divers-group.png"
-      alt="Faire grader un plongeon"
-    >
-
-    <div class="hero-overlay"></div>
-
-
-    <div class="page-title">
-
-      <span class="badge">
-        DÉPÔT EAH
-      </span>
-
-      <h1>
-        Faire <span>grader</span>
-      </h1>
-
-      <p>
-        Dépose les informations
-        correspondant à ton plongeon.
-      </p>
-
-    </div>
-
-  </section>
-
-
-  <section class="container section">
-
-    <form
-      class="grading-form"
-      id="gradingForm"
-    >
-
-      <div class="form-grid">
-
-
-        <label>
-
-          Prénom
-
-          <input
-            type="text"
-            name="firstname"
-            required
-          >
-
-        </label>
-
-
-        <label>
-
-          Nom
-
-          <input
-            type="text"
-            name="lastname"
-            required
-          >
-
-        </label>
-
-
-        <label class="full">
-
-          Email
-
-          <input
-            type="email"
-            name="email"
-            required
-          >
-
-        </label>
-
-
-        <label>
-
-          Discipline
-
-          <select
-            name="discipline"
-            required
-          >
-
-            <option value="">
-              Choisir
-            </option>
-
-            <option>
-              Plongeon olympique
-            </option>
-
-            <option>
-              Freestyle / Døds
-            </option>
-
-            <option>
-              High Diving
-            </option>
-
-            <option>
-              Saut de l'ange
-            </option>
-
-          </select>
-
-        </label>
-
-
-        <label>
-
-          Code / nom du plongeon
-
-          <input
-            type="text"
-            name="dive"
-            placeholder="Ex : 5152B"
-            required
-          >
-
-        </label>
-
-
-        <label>
-
-          Hauteur
-
-          <input
-            type="text"
-            name="height"
-            placeholder="Ex : 10 m"
-          >
-
-        </label>
-
-
-        <label>
-
-          Type de hauteur
-
-          <select name="heightType">
-
-            <option>
-              Hauteur connue
-            </option>
-
-            <option>
-              Hauteur estimée
-            </option>
-
-            <option>
-              Hauteur inconnue
-            </option>
-
-          </select>
-
-        </label>
-
-
-        <label class="full">
-
-          Commentaire
-
-          <textarea
-            name="message"
-            rows="5"
-            placeholder="Informations utiles pour l'évaluation..."
-          ></textarea>
-
-        </label>
-
-
-        <label class="full">
-
-          Lien vidéo
-
-          <input
-            type="url"
-            name="video"
-            placeholder="Google Drive, Dropbox, WeTransfer..."
-          >
-
-        </label>
-
-      </div>
-
-
-      <button
-        class="button submit"
-        type="submit"
-      >
-        Envoyer pour grading
-      </button>
-
-
-      <p id="formMessage"></p>
-
-    </form>
-
-  </section>
-
-</section>
-
-
-<!-- ====================================================== -->
-<!-- PLONGEON OLYMPIQUE -->
-<!-- ====================================================== -->
-
-<section
-  id="olympique"
-  class="page"
->
-
-  <section class="discipline-hero">
-
-    <img
-      src="discipline-olympique-new.jpg"
-      alt="Plongeon olympique"
-    >
-
-    <div class="hero-overlay"></div>
-
-
-    <div>
-
-      <span class="badge">
-        DISCIPLINE EAH 01
-      </span>
-
-      <h1>
-        Plongeon<br>
-        olympique
-      </h1>
-
-      <p>
-        Précision, technique,
-        rotations, positions
-        et maîtrise de l'entrée.
-      </p>
-
-    </div>
-
-  </section>
-
-
-  <section class="container section">
-
-    <div class="text-grid">
-
-      <article>
-
-        <span class="overline">
-          TAKEOFF
-        </span>
-
-        <h3>
-          Départ
-        </h3>
-
-        <p>
-          Trajectoire, impulsion,
-          détente, élévation,
-          fixation et coordination.
-        </p>
-
-      </article>
-
-
-      <article>
-
-        <span class="overline">
-          TRICK
-        </span>
-
-        <h3>
-          Phase aérienne
-        </h3>
-
-        <p>
-          Rotations, lignes,
-          position de corps,
-          ouverture et contrôle.
-        </p>
-
-      </article>
-
-
-      <article>
-
-        <span class="overline">
-          ENTRY
-        </span>
-
-        <h3>
-          Entrée
-        </h3>
-
-        <p>
-          Angle, axe,
-          alignement, bras,
-          jambes et propreté.
-        </p>
-
-      </article>
-
-    </div>
-
-  </section>
-
-</section>
-
-
-<!-- ====================================================== -->
-<!-- FREESTYLE / DØDS -->
-<!-- ====================================================== -->
-
-<section
-  id="freestyle"
-  class="page"
->
-
-  <section class="discipline-hero">
-
-    <img
-      src="hero-divers-group.png"
-      alt="Freestyle et Døds"
-    >
-
-    <div class="hero-overlay"></div>
-
-
-    <div>
-
-      <span class="badge">
-        DISCIPLINE EAH 02
-      </span>
-
-      <h1>
-        Freestyle<br>
-        / Døds
-      </h1>
-
-      <p>
-        Style, amplitude,
-        maîtrise aérienne
-        et spécificités d'entrée.
-      </p>
-
-    </div>
-
-  </section>
-
-
-  <section class="container section">
-
-    <div class="text-grid">
-
-      <article>
-
-        <span class="overline">
-          TAKEOFF
-        </span>
-
-        <h3>
-          Départ
-        </h3>
-
-        <p>
-          Standing, prise d'élan,
-          impulsions et départs spécifiques.
-        </p>
-
-      </article>
-
-
-      <article>
-
-        <span class="overline">
-          TRICK
-        </span>
-
-        <h3>
-          Style et contrôle
-        </h3>
-
-        <p>
-          Rotation, vitesse,
-          ligne, fluidité,
-          ouverture et repères.
-        </p>
-
-      </article>
-
-
-      <article>
-
-        <span class="overline">
-          ENTRY
-        </span>
-
-        <h3>
-          Entrée adaptée
-        </h3>
-
-        <p>
-          Les critères tiennent compte
-          des particularités propres
-          au Freestyle et au Døds.
-        </p>
-
-      </article>
-
-    </div>
-
-  </section>
-
-</section>
-
-
-<!-- ====================================================== -->
-<!-- HIGH DIVING -->
-<!-- ====================================================== -->
-
-<section
-  id="highdiving"
-  class="page"
->
-
-  <section class="discipline-hero">
-
-    <img
-      src="hero-diver-vertical.jpg"
-      alt="High Diving"
-    >
-
-    <div class="hero-overlay"></div>
-
-
-    <div>
-
-      <span class="badge">
-        DISCIPLINE EAH 03
-      </span>
-
-      <h1>
-        High<br>
-        Diving
-      </h1>
-
-      <p>
-        Hauteur, difficulté,
-        maîtrise aérienne
-        et contrôle de l'entrée.
-      </p>
-
-    </div>
-
-  </section>
-
-
-  <section class="container section">
-
-    <div class="text-grid">
-
-      <article>
-
-        <span class="overline">
-          HAUTEUR
-        </span>
-
-        <h3>
-          Une donnée essentielle
-        </h3>
-
-        <p>
-          La hauteur réelle
-          ou estimée est intégrée
-          au Grade Report.
-        </p>
-
-      </article>
-
-
-      <article>
-
-        <span class="overline">
-          DIFFICULTÉ
-        </span>
-
-        <h3>
-          Figure
-        </h3>
-
-        <p>
-          Saltos, vrilles,
-          position et degré de difficulté
-          sont associés au plongeon.
-        </p>
-
-      </article>
-
-
-      <article>
-
-        <span class="overline">
-          GRADING
-        </span>
-
-        <h3>
-          Maîtrise
-        </h3>
-
-        <p>
-          Takeoff, Trick et Entry
-          permettent de distinguer
-          difficulté et qualité d'exécution.
-        </p>
-
-      </article>
-
-    </div>
-
-  </section>
-
-</section>
-
-
-<!-- ====================================================== -->
-<!-- SAUT DE L'ANGE -->
-<!-- ====================================================== -->
-
-<section
-  id="ange"
-  class="page"
->
-
-  <section class="discipline-hero">
-
-    <img
-      src="hero-high-diving.png"
-      alt="Saut de l'ange"
-    >
-
-    <div class="hero-overlay"></div>
-
-
-    <div>
-
-      <span class="badge">
-        DISCIPLINE EAH 04
-      </span>
-
-      <h1>
-        Saut de<br>
-        l'ange
-      </h1>
-
-      <p>
-        Trajectoire, posture,
-        contrôle du corps
-        et maîtrise de l'entrée.
-      </p>
-
-    </div>
-
-  </section>
-
-
-  <section class="container section">
-
-    <div class="text-grid">
-
-      <article>
-
-        <span class="overline">
-          TAKEOFF
-        </span>
-
-        <h3>
-          Départ
-        </h3>
-
-        <p>
-          Impulsion, trajectoire
-          et qualité générale
-          de la mise en mouvement.
-        </p>
-
-      </article>
-
-
-      <article>
-
-        <span class="overline">
-          TRICK
-        </span>
-
-        <h3>
-          Posture
-        </h3>
-
-        <p>
-          Contrôle du corps,
-          ligne générale
-          et maîtrise de la phase aérienne.
-        </p>
-
-      </article>
-
-
-      <article>
-
-        <span class="overline">
-          ENTRY
-        </span>
-
-        <h3>
-          Entrée
-        </h3>
-
-        <p>
-          L'angle d'entrée est évalué
-          selon le référentiel EAH
-          applicable au saut de l'ange.
-        </p>
-
-      </article>
-
-    </div>
-
-  </section>
-
-</section>
-
-</main>
-
-
-<!-- ====================================================== -->
-<!-- FOOTER -->
-<!-- ====================================================== -->
-
-<footer>
-
-  <div class="footer-grid">
-
-    <div>
-
-      <h2>
-        EAH <span>Diving</span>
-      </h2>
-
-      <p>
-        Explore. Assess. Progress.
-      </p>
-
-    </div>
-
-
-    <div>
-
-      <strong>
-        Grading
-      </strong>
-
-      <a
-        href="#grading"
-        data-page="grading"
-      >
-        Le grading
-      </a>
-
-      <a
-        href="#blazons"
-        data-page="blazons"
-      >
-        Blazons
-      </a>
-
-      <a
-        href="#population"
-        data-page="population"
-      >
-        Population
-      </a>
-
-    </div>
-
-
-    <div>
-
-      <strong>
-        Explorer
-      </strong>
-
-      <a
-        href="#spots"
-        data-page="spots"
-      >
-        Spots
-      </a>
-
-      <a
-        href="#tarifs"
-        data-page="tarifs"
-      >
-        Tarifs
-      </a>
-
-      <a
-        href="#faire-grader"
-        data-page="faire-grader"
-      >
-        Faire grader
-      </a>
-
-    </div>
-
+  <!-- Effets eau -->
+  <div class="water-fx" aria-hidden="true">
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
   </div>
 
+  <!-- HEADER -->
+  <header class="header">
+    <a href="#accueil" class="logo" data-page="accueil">
+      <img src="logo-eah-diving.png" alt="Logo EAH Diving">
+      <div>
+        <strong>EAH</strong>
+        <span>DIVING</span>
+      </div>
+    </a>
 
-  <div class="copyright">
-    © 2026 EAH Diving
-  </div>
-
-</footer>
-
-
-<!-- ====================================================== -->
-<!-- MODAL GÉNÉRALE -->
-<!-- ====================================================== -->
-
-<div
-  id="siteModal"
-  class="modal"
-  aria-hidden="true"
->
-
-  <div
-    class="modal-overlay"
-    data-close-modal
-  ></div>
-
-
-  <div
-    class="modal-box"
-    role="dialog"
-    aria-modal="true"
-  >
-
-    <button
-      class="modal-close"
-      type="button"
-      data-close-modal
-      aria-label="Fermer"
-    >
-      ×
+    <button class="mobile-menu" id="mobileMenu" type="button" aria-label="Ouvrir le menu">
+      ☰
     </button>
 
+    <nav id="navigation">
+      <a href="#grading" data-page="grading">Le grading</a>
+      <a href="#blazons" data-page="blazons">Blazons</a>
+      <a href="#population" data-page="population">Population</a>
+      <a href="#spots" data-page="spots">Spots</a>
+      <a href="#actualites" data-page="actualites">Actualité</a>
+      <a href="#tarifs" data-page="tarifs">Tarifs</a>
 
-    <div id="modalContent"></div>
+      <div class="dropdown">
+        <button type="button">Disciplines ▾</button>
+        <div class="dropdown-content">
+          <a href="#olympique" data-page="olympique">Plongeon olympique</a>
+          <a href="#freestyle" data-page="freestyle">Freestyle / Døds</a>
+          <a href="#highdiving" data-page="highdiving">High Diving</a>
+          <a href="#ange" data-page="ange">Saut de l'ange</a>
+        </div>
+      </div>
 
+      <a href="#faire-grader" data-page="faire-grader" class="button small">
+        Faire grader
+      </a>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- ====================================================== -->
+    <!-- ACCUEIL -->
+    <!-- ====================================================== -->
+    <section id="accueil" class="page active">
+      <section class="hero">
+        <img src="hero-divers-group.png" class="hero-image" alt="EAH Diving">
+        <div class="hero-overlay"></div>
+
+        <div class="hero-content">
+          <span class="badge">EAH DIVING</span>
+
+          <h1>
+            Le plongeon.<br>
+            <span>Mesuré autrement.</span>
+          </h1>
+
+          <p>
+            EAH Diving propose un système de grading premium pour analyser,
+            valoriser et structurer la progression en plongeon, High Diving,
+            Freestyle / Døds et saut de l'ange.
+          </p>
+
+          <div class="buttons">
+            <a href="#faire-grader" data-page="faire-grader" class="button">
+              Faire grader un plongeon
+            </a>
+
+            <a href="#grading" data-page="grading" class="button secondary">
+              Comprendre le grading
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section class="container section">
+        <span class="overline">DISCIPLINES</span>
+        <h2>Plusieurs pratiques.<br>Un standard EAH.</h2>
+
+        <div class="discipline-grid">
+
+          <!-- OLYMPIQUE -->
+          <article class="image-card" data-open="olympique">
+            <picture class="card-media">
+              <source media="(max-width: 700px)" srcset="portrait-water-diver.jpg">
+              <img src="discipline-olympique-new.jpg" alt="Plongeon olympique">
+            </picture>
+
+            <div>
+              <small>DISCIPLINE 01</small>
+              <h3>Plongeon olympique</h3>
+              <p>
+                Technique, impulsion, rotations, positions et maîtrise de l'entrée à l'eau.
+              </p>
+              <strong>Découvrir →</strong>
+            </div>
+          </article>
+
+          <!-- FREESTYLE -->
+          <article class="image-card" data-open="freestyle">
+            <img src="hero-divers-group.png" alt="Freestyle et Døds">
+            <div>
+              <small>DISCIPLINE 02</small>
+              <h3>Freestyle / Døds</h3>
+              <p>
+                Style, amplitude, tolérances spécifiques et contrôle global du plongeon.
+              </p>
+              <strong>Découvrir →</strong>
+            </div>
+          </article>
+
+          <!-- HIGH DIVING -->
+          <article class="image-card" data-open="highdiving">
+            <picture class="card-media">
+              <source media="(min-width: 701px)" srcset="portrait-water-diver.jpg">
+              <img src="hero-diver-vertical.jpg" alt="High Diving">
+            </picture>
+
+            <div>
+              <small>DISCIPLINE 03</small>
+              <h3>High Diving</h3>
+              <p>
+                Grande hauteur, difficulté, maîtrise aérienne et contrôle de l'entrée.
+              </p>
+              <strong>Découvrir →</strong>
+            </div>
+          </article>
+
+          <!-- ANGE -->
+          <article class="image-card" data-open="ange">
+            <img src="hero-high-diving.png" alt="Saut de l'ange">
+            <div>
+              <small>DISCIPLINE 04</small>
+              <h3>Saut de l'ange</h3>
+              <p>
+                Trajectoire, posture, style visuel et angle d'entrée spécifique.
+              </p>
+              <strong>Découvrir →</strong>
+            </div>
+          </article>
+
+        </div>
+      </section>
+
+      <section class="container section">
+        <div class="premium-panel">
+          <span class="overline">EAH GRADING</span>
+          <h2>De la vidéo au Grade Report.</h2>
+          <p>
+            Chaque performance est analysée à travers trois grandes phases :
+            Takeoff, Trick et Entry. La lecture EAH vise à distinguer la qualité
+            d'exécution, la variété des figures, la difficulté technique et la progression globale.
+          </p>
+
+          <div class="metrics">
+            <div>
+              <strong>D</strong>
+              <span>Takeoff / Départ</span>
+            </div>
+            <div>
+              <strong>T</strong>
+              <span>Trick / Phase aérienne</span>
+            </div>
+            <div>
+              <strong>E</strong>
+              <span>Entry / Entrée</span>
+            </div>
+          </div>
+        </div>
+      </section>
+    </section>
+
+    <!-- ====================================================== -->
+    <!-- GRADING -->
+    <!-- ====================================================== -->
+    <section id="grading" class="page">
+      <section class="page-hero">
+        <img src="hero-divers-group.png" alt="Grading EAH Diving">
+        <div class="hero-overlay"></div>
+
+        <div class="page-title">
+          <span class="badge">MÉTHODE EAH</span>
+          <h1>Le <span>grading</span></h1>
+          <p>
+            Clique sur D, T ou E pour consulter la fiche de notation détaillée.
+            La note EAH finale ne repose pas sur une moyenne simple : elle dépend
+            du critère le plus faible.
+          </p>
+        </div>
+      </section>
+
+      <section class="container section">
+        <span class="overline">LES 3 CRITÈRES</span>
+        <h2>Une lecture claire.<br>Une analyse détaillée.</h2>
+
+        <div class="grading-grid">
+          <article class="grading-card" data-sheet="D">
+            <div class="letter">D</div>
+            <span class="grading-name">TAKEOFF</span>
+            <h3>Départ</h3>
+            <p>
+              Impulsion, trajectoire, coordination, fixation, stabilité
+              et qualité de la préparation.
+            </p>
+            <strong class="click-more">Voir la grille →</strong>
+          </article>
+
+          <article class="grading-card" data-sheet="T">
+            <div class="letter">T</div>
+            <span class="grading-name">TRICK</span>
+            <h3>Phase aérienne</h3>
+            <p>
+              Rotations, lignes, maîtrise du corps, fluidité, ouverture
+              et repères dans l'espace.
+            </p>
+            <strong class="click-more">Voir la grille →</strong>
+          </article>
+
+          <article class="grading-card" data-sheet="E">
+            <div class="letter">E</div>
+            <span class="grading-name">ENTRY</span>
+            <h3>Entrée</h3>
+            <p>
+              Angle, axe, alignement, contrôle final, position des bras,
+              des jambes et propreté de l'entrée.
+            </p>
+            <strong class="click-more">Voir la grille →</strong>
+          </article>
+        </div>
+
+        <div class="premium-panel calculation-panel">
+          <span class="overline">CALCUL DE LA NOTE FINALE</span>
+          <h2>Comment est attribuée la note EAH finale ?</h2>
+
+          <p>
+            EAH ne fait volontairement pas une simple moyenne des trois notes.
+            La note finale repose sur le critère le plus faible, afin qu'un plongeon
+            ne puisse pas obtenir une très haute note avec une faiblesse importante
+            sur une phase.
+          </p>
+
+          <div class="calculation-steps">
+
+            <div class="calculation-step">
+              <span>01</span>
+              <div>
+                <h3>Identifier la note la plus basse</h3>
+                <p>
+                  On compare les trois notes D, T et E pour déterminer
+                  le bloc le plus faible.
+                </p>
+              </div>
+            </div>
+
+            <div class="calculation-step">
+              <span>02</span>
+              <div>
+                <h3>Si la note la plus basse apparaît au moins 2 fois</h3>
+                <p>
+                  La note finale est égale à cette note la plus basse.
+                </p>
+              </div>
+            </div>
+
+            <div class="calculation-step">
+              <span>03</span>
+              <div>
+                <h3>Si la note la plus basse est isolée</h3>
+                <p>
+                  On ajoute <strong>+0,5 point</strong> à cette note la plus basse.
+                </p>
+              </div>
+            </div>
+
+            <div class="calculation-step">
+              <span>04</span>
+              <div>
+                <h3>Lecture finale EAH</h3>
+                <p>
+                  Le résultat obtenu permet d'attribuer le niveau final
+                  selon l'échelle EAH.
+                </p>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="formula-grid">
+            <div class="formula-card">
+              <span>Exemple 1</span>
+              <strong>9 / 9 / 8</strong>
+              <p>
+                La note la plus basse est 8, elle est isolée,
+                donc la note finale est <strong>8,5</strong>.
+              </p>
+            </div>
+
+            <div class="formula-card">
+              <span>Exemple 2</span>
+              <strong>8 / 8 / 9</strong>
+              <p>
+                La note la plus basse est 8, elle apparaît au moins 2 fois,
+                donc la note finale reste <strong>8</strong>.
+              </p>
+            </div>
+
+            <div class="formula-card">
+              <span>Exemple 3</span>
+              <strong>7 / 6 / 6</strong>
+              <p>
+                La note la plus basse est 6, elle apparaît au moins 2 fois,
+                donc la note finale reste <strong>6</strong>.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="examples-grid">
+          <article class="example-panel">
+            <span class="overline">ÉCHELLE FINALE</span>
+            <h3>Niveaux EAH</h3>
+            <p>
+              Cette échelle présente la lecture de la note finale
+              et l'interprétation associée.
+            </p>
+            <img src="notation-levels.png" alt="Niveaux de notation EAH">
+          </article>
+
+          <article class="example-panel">
+            <span class="overline">EXEMPLE DE DOCUMENT</span>
+            <h3>Grade Report EAH</h3>
+            <p>
+              Exemple de restitution complète avec les notes par critère,
+              la lecture finale et les éléments à améliorer.
+            </p>
+            <img src="grade-report-example.png" alt="Exemple de Grade Report EAH Diving">
+          </article>
+        </div>
+      </section>
+    </section>
+
+    <!-- ====================================================== -->
+    <!-- BLAZONS -->
+    <!-- ====================================================== -->
+    <section id="blazons" class="page">
+      <section class="page-hero">
+        <img src="hero-divers-group.png" alt="Blazons EAH Diving">
+        <div class="hero-overlay"></div>
+
+        <div class="page-title">
+          <span class="badge">PROGRESSION EAH</span>
+          <h1>Les <span>blazons</span></h1>
+          <p>
+            Les blazons mesurent plusieurs choses en même temps :
+            la variété des plongeons, la polyvalence entre les groupes,
+            la qualité d'exécution avec les notes EAH et progressivement la difficulté technique.
+          </p>
+        </div>
+      </section>
+
+      <section class="container section">
+        <div class="blazon-grid">
+
+          <article class="blazon-card">
+            <img src="blazon-bronze.png" alt="Blazon Bronze EAH Diving">
+            <h3>Bronze</h3>
+            <ul class="criteria-list">
+              <li>10 plongeons différents</li>
+              <li>Au moins 4 groupes représentés</li>
+              <li>3 plongeons notés ≥ 7/10</li>
+              <li>Jusqu'à 2 bandes de hauteur</li>
+            </ul>
+          </article>
+
+          <article class="blazon-card">
+            <img src="blazon-silver.png" alt="Blazon Silver EAH Diving">
+            <h3>Silver</h3>
+            <ul class="criteria-list">
+              <li>20 plongeons différents</li>
+              <li>Les 7 groupes représentés</li>
+              <li>10 plongeons notés ≥ 7/10</li>
+              <li>Dont 2 plongeons ≥ 8/10</li>
+              <li>Jusqu'à 3 bandes</li>
+            </ul>
+          </article>
+
+          <article class="blazon-card">
+            <img src="blazon-gold.png" alt="Blazon Gold EAH Diving">
+            <h3>Gold</h3>
+            <ul class="criteria-list">
+              <li>35 plongeons différents</li>
+              <li>Les 7 groupes représentés</li>
+              <li>10 plongeons ≥ 8/10</li>
+              <li>3 plongeons ≥ 9/10</li>
+              <li>Au moins 3 figures de difficulté EAH 4 ou 5</li>
+              <li>Jusqu'à 3 bandes</li>
+            </ul>
+          </article>
+
+          <article class="blazon-card">
+            <img src="blazon-legend.png" alt="Blazon Legend EAH Diving">
+            <h3>Legend</h3>
+            <ul class="criteria-list">
+              <li>50 plongeons différents</li>
+              <li>Les 7 groupes représentés</li>
+              <li>30 plongeons ≥ 8/10</li>
+              <li>10 plongeons ≥ 9/10</li>
+              <li>Exigence supplémentaire sur des figures à forte difficulté</li>
+              <li>Jusqu'à 3 bandes</li>
+            </ul>
+          </article>
+
+        </div>
+
+        <div class="premium-panel">
+          <span class="overline">PRÉCISION LEGEND</span>
+          <h2>Exigence haute difficulté pour le blason Legend</h2>
+
+          <div class="text-grid">
+            <article>
+              <span class="overline">TREMPLIN FEMMES</span>
+              <h3>Exigence</h3>
+              <p>
+                3 figures de difficulté EAH 4 obtenant au moins 9/10.
+              </p>
+            </article>
+
+            <article>
+              <span class="overline">TREMPLIN HOMMES</span>
+              <h3>Exigence</h3>
+              <p>
+                3 figures de difficulté EAH 4 obtenant au moins 9/10.
+              </p>
+            </article>
+
+            <article>
+              <span class="overline">PLATEFORME</span>
+              <h3>Exigence</h3>
+              <p>
+                Possibilité d'aller jusqu'à la difficulté EAH 5,
+                selon le référentiel de difficulté correspondant.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+    </section>
+
+    <!-- ====================================================== -->
+    <!-- POPULATION -->
+    <!-- ====================================================== -->
+    <section id="population" class="page">
+      <section class="page-hero">
+        <img src="hero-divers-group.png" alt="Population EAH Diving">
+        <div class="hero-overlay"></div>
+
+        <div class="page-title">
+          <span class="badge">RÉFÉRENTIEL EAH</span>
+          <h1>Population</h1>
+          <p>
+            Recherche un plongeon par nom, code, discipline ou groupe.
+            Clique sur un plongeon pour consulter sa fiche détaillée et ses statistiques.
+          </p>
+        </div>
+      </section>
+
+      <section class="container section">
+        <div class="population-intro premium-panel">
+          <span class="overline">OUTIL DE CONSULTATION</span>
+          <h2>Explorer la population d'un plongeon</h2>
+          <p>
+            Cette rubrique permet d'accéder au référentiel EAH par nom de plongeon,
+            code et catégorie. En cliquant sur le plongeon, tu affiches sa fiche,
+            ses caractéristiques, les hauteurs connues et le nombre de personnes
+            l'ayant validé ainsi que les notes observées.
+          </p>
+        </div>
+
+        <div class="population-tool">
+          <div class="search-grid">
+            <label>
+              <span>Nom ou code</span>
+              <input id="searchDive" type="text" placeholder="Ex : 5152B, salto arrière, Døds...">
+            </label>
+
+            <label>
+              <span>Discipline</span>
+              <select id="disciplineFilter">
+                <option value="">Toutes</option>
+                <option value="Plongeon olympique">Plongeon olympique</option>
+                <option value="Freestyle / Døds">Freestyle / Døds</option>
+                <option value="High Diving">High Diving</option>
+                <option value="Saut de l'ange">Saut de l'ange</option>
+              </select>
+            </label>
+
+            <label>
+              <span>Groupe</span>
+              <select id="groupFilter">
+                <option value="">Tous</option>
+              </select>
+            </label>
+          </div>
+
+          <div id="populationResults"></div>
+        </div>
+      </section>
+    </section>
+
+    <!-- ====================================================== -->
+    <!-- SPOTS -->
+    <!-- ====================================================== -->
+    <section id="spots" class="page">
+      <section class="page-hero">
+        <img src="hero-divers-group.png" alt="Spots EAH Diving">
+        <div class="hero-overlay"></div>
+
+        <div class="page-title">
+          <span class="badge">RÉFÉRENTIEL TERRAIN</span>
+          <h1>Spots</h1>
+          <p>
+            Découvre plusieurs spots référencés dans l'univers EAH Diving.
+            La sécurité doit toujours être vérifiée sur place.
+          </p>
+        </div>
+      </section>
+
+      <section class="container section spots-list">
+
+        <article class="spot">
+          <div class="spot-picture">
+            <img src="spot-trou-du-souffleur.jpg" alt="Trou du Souffleur">
+          </div>
+          <div class="spot-content">
+            <span class="overline">CASSIS</span>
+            <h2>Trou du Souffleur</h2>
+            <div class="tags">
+              <span>≈ 21 m</span>
+              <span>High Diving</span>
+              <span>Spot naturel</span>
+            </div>
+            <p>
+              Spot naturel emblématique pouvant être intégré au référentiel EAH Diving
+              avec hauteur indicative et description du contexte.
+            </p>
+            <div class="warning">
+              Vérifier systématiquement la profondeur, les obstacles, les conditions,
+              l'accès et la sécurité avant toute pratique.
+            </div>
+          </div>
+        </article>
+
+        <article class="spot">
+          <div class="spot-picture">
+            <img src="spot-ponte-brolla.jpg" alt="Ponte Brolla">
+          </div>
+          <div class="spot-content">
+            <span class="overline">SUISSE</span>
+            <h2>Ponte Brolla</h2>
+            <div class="tags">
+              <span>18 m</span>
+              <span>High Diving</span>
+              <span>Spot naturel</span>
+            </div>
+            <p>
+              Spot de référence pouvant être intégré dans le référentiel EAH
+              avec description, accès et hauteur indicative.
+            </p>
+            <div class="warning">
+              Vérification indépendante indispensable de la profondeur,
+              du niveau de l'eau, des rochers, de l'accès et des conditions du jour.
+            </div>
+          </div>
+        </article>
+
+        <article class="spot">
+          <div class="spot-picture">
+            <img src="spot-trou-du-diable.jpg" alt="Trou du Diable">
+          </div>
+          <div class="spot-content">
+            <span class="overline">SPOT NATUREL</span>
+            <h2>Trou du Diable</h2>
+            <div class="tags">
+              <span>19 m</span>
+              <span>High Diving</span>
+              <span>Spot naturel</span>
+            </div>
+            <p>
+              Spot à intégrer dans la base EAH avec sa hauteur, son descriptif
+              et ses spécificités de pratique.
+            </p>
+            <div class="warning">
+              Les caractéristiques naturelles d'un spot peuvent évoluer.
+              Une vérification sur place reste nécessaire.
+            </div>
+          </div>
+        </article>
+
+        <article class="spot">
+          <div class="spot-picture">
+            <img src="spot-pont-neuf.jpg" alt="Pont Neuf">
+          </div>
+          <div class="spot-content">
+            <span class="overline">GRANDE HAUTEUR</span>
+            <h2>Pont Neuf</h2>
+            <div class="tags">
+              <span>27 m</span>
+              <span>High Diving</span>
+              <span>Grande hauteur</span>
+            </div>
+            <p>
+              Spot très haut à intégrer dans le référentiel avec un niveau
+              de difficulté et des informations de sécurité associées.
+            </p>
+            <div class="warning">
+              Une hauteur importante implique des risques majeurs.
+              Les conditions, autorisations et caractéristiques du site
+              doivent être vérifiées indépendamment.
+            </div>
+          </div>
+        </article>
+
+      </section>
+    </section>
+
+    <!-- ====================================================== -->
+    <!-- ACTUALITÉ -->
+    <!-- ====================================================== -->
+    <section id="actualites" class="page">
+      <section class="page-hero">
+        <img src="hero-divers-group.png" alt="Actualité EAH Diving">
+        <div class="hero-overlay"></div>
+
+        <div class="page-title">
+          <span class="badge">ACTUALITÉ EAH</span>
+          <h1>Actualité</h1>
+          <p>
+            Suivi, informations EAH et conseils techniques.
+          </p>
+        </div>
+      </section>
+
+      <section class="container section">
+        <div class="news-grid">
+          <article class="news-card">
+            <span class="overline">PLONGEON DE LA SEMAINE</span>
+            <h3>Rubrique à mettre en avant</h3>
+            <p>
+              Tu peux modifier cette zone pour afficher chaque semaine
+              un plongeon, un spot, une progression ou un Grade Report marquant.
+            </p>
+            <div class="info-box">
+              Exemple : “Back 2½ Somersaults — point d'attention sur la fluidité
+              de rotation et la qualité de l'entrée.”
+            </div>
+          </article>
+
+          <article class="news-card">
+            <span class="overline">INFORMATIONS</span>
+            <h3>Qu'est-ce que EAH ?</h3>
+            <p>
+              EAH Diving est un système de grading et de valorisation du plongeon.
+              Il structure l'évaluation, met en avant les critères techniques,
+              la progression, la difficulté et l'historique des performances.
+            </p>
+
+            <ul class="contact-list">
+              <li><strong>Email :</strong> <a href="mailto:goin.eah@gmail.com">goin.eah@gmail.com</a></li>
+              <li><strong>Téléphone :</strong> <a href="tel:0766699613">07 66 69 96 13</a></li>
+            </ul>
+          </article>
+        </div>
+
+        <div class="premium-panel advice-section">
+          <span class="overline">CONSEILS EAH</span>
+          <h2>Vidéos et explications par thème</h2>
+          <p>
+            Clique sur un thème pour ouvrir sa fiche. Tu pourras ensuite
+            y ajouter la vidéo correspondante et compléter les explications.
+          </p>
+
+          <div class="advice-grid">
+            <article class="advice-card" data-advice="avant">
+              <h3>Salto avant</h3>
+              <p>Principes, points d'attention et lecture EAH.</p>
+              <button type="button" class="button small secondary">Voir la fiche</button>
+            </article>
+
+            <article class="advice-card" data-advice="arriere">
+              <h3>Salto arrière</h3>
+              <p>Départ, repères et contrôle de rotation.</p>
+              <button type="button" class="button small secondary">Voir la fiche</button>
+            </article>
+
+            <article class="advice-card" data-advice="renverse">
+              <h3>Renversé</h3>
+              <p>Trajectoire, retour et lecture technique.</p>
+              <button type="button" class="button small secondary">Voir la fiche</button>
+            </article>
+
+            <article class="advice-card" data-advice="retourne">
+              <h3>Retourné</h3>
+              <p>Ouverture, repères et contrôle du corps.</p>
+              <button type="button" class="button small secondary">Voir la fiche</button>
+            </article>
+
+            <article class="advice-card" data-advice="vrille">
+              <h3>Vrille</h3>
+              <p>Lancement, axe, dissociation et régularité.</p>
+              <button type="button" class="button small secondary">Voir la fiche</button>
+            </article>
+          </div>
+        </div>
+      </section>
+    </section>
+
+    <!-- ====================================================== -->
+    <!-- TARIFS -->
+    <!-- ====================================================== -->
+    <section id="tarifs" class="page">
+      <section class="page-hero">
+        <img src="hero-divers-group.png" alt="Tarifs EAH Diving">
+        <div class="hero-overlay"></div>
+
+        <div class="page-title">
+          <span class="badge">EAH DIVING</span>
+          <h1>Tarifs</h1>
+          <p>
+            Grading vidéo, profil + carte et carte EAH Diving.
+          </p>
+        </div>
+      </section>
+
+      <section class="container section">
+        <div class="price-grid">
+
+          <article class="price-card">
+            <small>GRADING</small>
+            <h3>Grading vidéo</h3>
+            <div class="price">9 €</div>
+            <p>
+              Analyse d'une vidéo avec lecture EAH et restitution des notes.
+            </p>
+            <ul>
+              <li>Évaluation EAH</li>
+              <li>Notes D / T / E</li>
+              <li>Note finale</li>
+              <li>Commentaires d'amélioration</li>
+            </ul>
+          </article>
+
+          <article class="price-card featured">
+            <small>PACK</small>
+            <h3>Profil + carte</h3>
+            <div class="price">50 €</div>
+            <p>
+              Création du profil EAH et carte de suivi.
+            </p>
+            <ul>
+              <li>Profil personnalisé</li>
+              <li>Carte EAH Diving</li>
+              <li>Suivi de progression</li>
+              <li>Référencement du plongeur</li>
+            </ul>
+          </article>
+
+          <article class="price-card">
+            <small>CARTE</small>
+            <h3>Carte EAH</h3>
+            <div class="price">9 €</div>
+            <p>
+              Carte EAH Diving liée à ton profil.
+            </p>
+            <ul>
+              <li>Nom du plongeur</li>
+              <li>Référence EAH</li>
+              <li>Support premium</li>
+              <li>Utilisation de suivi</li>
+            </ul>
+          </article>
+
+        </div>
+      </section>
+    </section>
+
+    <!-- ====================================================== -->
+    <!-- FAIRE GRADER -->
+    <!-- ====================================================== -->
+    <section id="faire-grader" class="page">
+      <section class="page-hero">
+        <img src="hero-divers-group.png" alt="Faire grader un plongeon">
+        <div class="hero-overlay"></div>
+
+        <div class="page-title">
+          <span class="badge">DÉPÔT EAH</span>
+          <h1>Faire <span>grader</span></h1>
+          <p>
+            Dépose les informations correspondant à ton plongeon.
+          </p>
+        </div>
+      </section>
+
+      <section class="container section">
+        <form class="grading-form" id="gradingForm">
+          <div class="form-grid">
+
+            <label>
+              Prénom
+              <input type="text" name="firstname" required>
+            </label>
+
+            <label>
+              Nom
+              <input type="text" name="lastname" required>
+            </label>
+
+            <label class="full">
+              Email
+              <input type="email" name="email" required>
+            </label>
+
+            <label>
+              Discipline
+              <select name="discipline" required>
+                <option value="">Choisir</option>
+                <option>Plongeon olympique</option>
+                <option>Freestyle / Døds</option>
+                <option>High Diving</option>
+                <option>Saut de l'ange</option>
+              </select>
+            </label>
+
+            <label>
+              Code / nom du plongeon
+              <input type="text" name="dive" placeholder="Ex : 5152B" required>
+            </label>
+
+            <label>
+              Hauteur
+              <input type="text" name="height" placeholder="Ex : 10 m">
+            </label>
+
+            <label>
+              Type de hauteur
+              <select name="heightType">
+                <option>Hauteur connue</option>
+                <option>Hauteur estimée</option>
+                <option>Hauteur inconnue</option>
+              </select>
+            </label>
+
+            <label class="full">
+              Commentaire
+              <textarea name="message" rows="5" placeholder="Informations utiles pour l'évaluation..."></textarea>
+            </label>
+
+            <label class="full">
+              Lien vidéo
+              <input type="url" name="video" placeholder="Google Drive, Dropbox, WeTransfer...">
+            </label>
+
+          </div>
+
+          <button class="button submit" type="submit">
+            Envoyer pour grading
+          </button>
+
+          <p id="formMessage"></p>
+        </form>
+      </section>
+    </section>
+
+    <!-- ====================================================== -->
+    <!-- PLONGEON OLYMPIQUE -->
+    <!-- ====================================================== -->
+    <section id="olympique" class="page">
+      <section class="discipline-hero">
+        <picture class="hero-media">
+          <source media="(max-width: 700px)" srcset="portrait-water-diver.jpg">
+          <img src="discipline-olympique-new.jpg" alt="Plongeon olympique">
+        </picture>
+        <div class="hero-overlay"></div>
+
+        <div>
+          <span class="badge">DISCIPLINE EAH 01</span>
+          <h1>Plongeon<br>olympique</h1>
+          <p>
+            Précision, technique, rotations, positions
+            et maîtrise de l'entrée.
+          </p>
+        </div>
+      </section>
+
+      <section class="container section">
+        <div class="text-grid">
+          <article>
+            <span class="overline">TAKEOFF</span>
+            <h3>Départ</h3>
+            <p>
+              Trajectoire, impulsion, détente, élévation,
+              fixation et coordination.
+            </p>
+          </article>
+
+          <article>
+            <span class="overline">TRICK</span>
+            <h3>Phase aérienne</h3>
+            <p>
+              Rotations, lignes, position du corps,
+              ouverture et contrôle.
+            </p>
+          </article>
+
+          <article>
+            <span class="overline">ENTRY</span>
+            <h3>Entrée</h3>
+            <p>
+              Angle, axe, alignement, bras,
+              jambes et propreté.
+            </p>
+          </article>
+        </div>
+      </section>
+    </section>
+
+    <!-- ====================================================== -->
+    <!-- FREESTYLE / DØDS -->
+    <!-- ====================================================== -->
+    <section id="freestyle" class="page">
+      <section class="discipline-hero">
+        <img src="hero-divers-group.png" alt="Freestyle et Døds">
+        <div class="hero-overlay"></div>
+
+        <div>
+          <span class="badge">DISCIPLINE EAH 02</span>
+          <h1>Freestyle<br>/ Døds</h1>
+          <p>
+            Style, amplitude, maîtrise aérienne
+            et spécificités d'entrée.
+          </p>
+        </div>
+      </section>
+
+      <section class="container section">
+        <div class="text-grid">
+          <article>
+            <span class="overline">TAKEOFF</span>
+            <h3>Départ</h3>
+            <p>
+              Standing, prise d'élan, impulsions
+              et départs spécifiques.
+            </p>
+          </article>
+
+          <article>
+            <span class="overline">TRICK</span>
+            <h3>Style et contrôle</h3>
+            <p>
+              Rotation, vitesse, ligne,
+              fluidité, ouverture et repères.
+            </p>
+          </article>
+
+          <article>
+            <span class="overline">ENTRY</span>
+            <h3>Entrée adaptée</h3>
+            <p>
+              Les critères tiennent compte des particularités
+              propres au Freestyle et au Døds.
+            </p>
+          </article>
+        </div>
+      </section>
+    </section>
+
+    <!-- ====================================================== -->
+    <!-- HIGH DIVING -->
+    <!-- ====================================================== -->
+    <section id="highdiving" class="page">
+      <section class="discipline-hero">
+        <picture class="hero-media">
+          <source media="(min-width: 701px)" srcset="portrait-water-diver.jpg">
+          <img src="hero-diver-vertical.jpg" alt="High Diving">
+        </picture>
+        <div class="hero-overlay"></div>
+
+        <div>
+          <span class="badge">DISCIPLINE EAH 03</span>
+          <h1>High<br>Diving</h1>
+          <p>
+            Hauteur, difficulté, maîtrise aérienne
+            et contrôle de l'entrée.
+          </p>
+        </div>
+      </section>
+
+      <section class="container section">
+        <div class="text-grid">
+          <article>
+            <span class="overline">HAUTEUR</span>
+            <h3>Une donnée essentielle</h3>
+            <p>
+              La hauteur réelle ou estimée est intégrée
+              au Grade Report.
+            </p>
+          </article>
+
+          <article>
+            <span class="overline">DIFFICULTÉ</span>
+            <h3>Figure</h3>
+            <p>
+              Saltos, vrilles, position
+              et niveau de difficulté sont associés au plongeon.
+            </p>
+          </article>
+
+          <article>
+            <span class="overline">GRADING</span>
+            <h3>Maîtrise</h3>
+            <p>
+              Takeoff, Trick et Entry permettent de distinguer
+              la difficulté et la qualité d'exécution.
+            </p>
+          </article>
+        </div>
+      </section>
+    </section>
+
+    <!-- ====================================================== -->
+    <!-- SAUT DE L'ANGE -->
+    <!-- ====================================================== -->
+    <section id="ange" class="page">
+      <section class="discipline-hero">
+        <img src="hero-high-diving.png" alt="Saut de l'ange">
+        <div class="hero-overlay"></div>
+
+        <div>
+          <span class="badge">DISCIPLINE EAH 04</span>
+          <h1>Saut de<br>l'ange</h1>
+          <p>
+            Trajectoire, posture, contrôle du corps
+            et maîtrise de l'entrée.
+          </p>
+        </div>
+      </section>
+
+      <section class="container section">
+        <div class="text-grid">
+          <article>
+            <span class="overline">TAKEOFF</span>
+            <h3>Départ</h3>
+            <p>
+              Impulsion, trajectoire
+              et qualité générale de la mise en mouvement.
+            </p>
+          </article>
+
+          <article>
+            <span class="overline">TRICK</span>
+            <h3>Posture</h3>
+            <p>
+              Contrôle du corps, ligne générale
+              et maîtrise de la phase aérienne.
+            </p>
+          </article>
+
+          <article>
+            <span class="overline">ENTRY</span>
+            <h3>Entrée</h3>
+            <p>
+              L'angle d'entrée est évalué selon
+              le référentiel EAH applicable au saut de l'ange.
+            </p>
+          </article>
+        </div>
+      </section>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-grid">
+      <div>
+        <h2>EAH <span>Diving</span></h2>
+        <p>Explore. Assess. Highlight Diving.</p>
+      </div>
+
+      <div>
+        <strong>Grading</strong>
+        <a href="#grading" data-page="grading">Le grading</a>
+        <a href="#blazons" data-page="blazons">Blazons</a>
+        <a href="#population" data-page="population">Population</a>
+      </div>
+
+      <div>
+        <strong>Explorer</strong>
+        <a href="#spots" data-page="spots">Spots</a>
+        <a href="#actualites" data-page="actualites">Actualité</a>
+        <a href="#faire-grader" data-page="faire-grader">Faire grader</a>
+      </div>
+    </div>
+
+    <div class="copyright">
+      © 2026 EAH Diving
+    </div>
+  </footer>
+
+  <!-- MODAL GÉNÉRALE -->
+  <div id="siteModal" class="modal" aria-hidden="true">
+    <div class="modal-overlay" data-close-modal></div>
+
+    <div class="modal-box" role="dialog" aria-modal="true">
+      <button class="modal-close" type="button" data-close-modal aria-label="Fermer">
+        ×
+      </button>
+      <div id="modalContent"></div>
+    </div>
   </div>
 
-</div>
-
-
-<script src="script.js"></script>
-
+  <script src="script.js"></script>
 </body>
 </html>
