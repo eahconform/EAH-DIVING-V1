@@ -2,498 +2,211 @@
    EAH DIVING
    ========================================================= */
 
-
 /* =========================================================
    NAVIGATION
    ========================================================= */
 
-const pages =
-  document.querySelectorAll(".page");
-
-const navigationLinks =
-  document.querySelectorAll("[data-page]");
-
-const mobileMenu =
-  document.getElementById("mobileMenu");
-
-const navigation =
-  document.getElementById("navigation");
-
+const pages = document.querySelectorAll(".page");
+const navigationLinks = document.querySelectorAll("[data-page]");
+const mobileMenu = document.getElementById("mobileMenu");
+const navigation = document.getElementById("navigation");
 
 function openPage(pageName) {
+  pages.forEach(page => page.classList.remove("active"));
 
-  pages.forEach(page => {
-    page.classList.remove("active");
-  });
-
-
-  const target =
-    document.getElementById(pageName);
-
+  const target = document.getElementById(pageName);
 
   if (target) {
-
     target.classList.add("active");
-
   }
 
-
-  if (
-    window.location.hash
-    !==
-    "#" + pageName
-  ) {
-
-    history.replaceState(
-      null,
-      "",
-      "#" + pageName
-    );
-
+  if (window.location.hash !== "#" + pageName) {
+    history.replaceState(null, "", "#" + pageName);
   }
-
 
   window.scrollTo({
     top: 0,
     behavior: "smooth"
   });
 
-
   if (navigation) {
-
     navigation.classList.remove("open");
-
   }
-
 }
-
 
 navigationLinks.forEach(link => {
+  link.addEventListener("click", function (event) {
+    const page = this.dataset.page;
 
-  link.addEventListener(
-    "click",
-    function (event) {
+    if (!page) return;
 
-      const page =
-        this.dataset.page;
-
-
-      if (!page) {
-        return;
-      }
-
-
-      event.preventDefault();
-
-
-      openPage(page);
-
-    }
-  );
-
+    event.preventDefault();
+    openPage(page);
+  });
 });
 
-
-document
-  .querySelectorAll("[data-open]")
-  .forEach(card => {
-
-    card.addEventListener(
-      "click",
-      function () {
-
-        const page =
-          this.dataset.open;
-
-
-        if (page) {
-
-          openPage(page);
-
-        }
-
-      }
-    );
-
+document.querySelectorAll("[data-open]").forEach(card => {
+  card.addEventListener("click", function () {
+    const page = this.dataset.open;
+    if (page) openPage(page);
   });
-
+});
 
 if (mobileMenu) {
-
-  mobileMenu.addEventListener(
-    "click",
-    function () {
-
-      navigation.classList.toggle("open");
-
-    }
-  );
-
+  mobileMenu.addEventListener("click", function () {
+    navigation.classList.toggle("open");
+  });
 }
-
 
 function loadHashPage() {
+  const hash = window.location.hash.replace("#", "");
 
-  const hash =
-    window.location.hash
-      .replace("#", "");
-
-
-  if (
-    hash
-    &&
-    document.getElementById(hash)
-  ) {
-
+  if (hash && document.getElementById(hash)) {
     openPage(hash);
-
-  }
-
-  else {
-
+  } else {
     openPage("accueil");
-
   }
-
 }
 
-
-window.addEventListener(
-  "hashchange",
-  loadHashPage
-);
-
-
+window.addEventListener("hashchange", loadHashPage);
 loadHashPage();
-
 
 /* =========================================================
    MODAL
    ========================================================= */
 
-const siteModal =
-  document.getElementById("siteModal");
-
-const modalContent =
-  document.getElementById("modalContent");
-
+const siteModal = document.getElementById("siteModal");
+const modalContent = document.getElementById("modalContent");
 
 function openModal(html) {
+  if (!siteModal || !modalContent) return;
 
-  if (
-    !siteModal
-    ||
-    !modalContent
-  ) {
-
-    return;
-
-  }
-
-
-  modalContent.innerHTML =
-    html;
-
-
+  modalContent.innerHTML = html;
   siteModal.classList.add("show");
-
-  siteModal.setAttribute(
-    "aria-hidden",
-    "false"
-  );
-
-
-  document.body.classList.add(
-    "modal-open"
-  );
-
+  siteModal.setAttribute("aria-hidden", "false");
+  document.body.classList.add("modal-open");
 }
-
 
 function closeModal() {
-
-  if (!siteModal) {
-    return;
-  }
-
+  if (!siteModal) return;
 
   siteModal.classList.remove("show");
-
-  siteModal.setAttribute(
-    "aria-hidden",
-    "true"
-  );
-
-
-  document.body.classList.remove(
-    "modal-open"
-  );
-
+  siteModal.setAttribute("aria-hidden", "true");
+  document.body.classList.remove("modal-open");
 }
 
-
-document.addEventListener(
-  "click",
-  function (event) {
-
-    if (
-      event.target.matches(
-        "[data-close-modal]"
-      )
-    ) {
-
-      closeModal();
-
-    }
-
+document.addEventListener("click", function (event) {
+  if (event.target.matches("[data-close-modal]")) {
+    closeModal();
   }
-);
+});
 
-
-document.addEventListener(
-  "keydown",
-  function (event) {
-
-    if (
-      event.key === "Escape"
-    ) {
-
-      closeModal();
-
-    }
-
+document.addEventListener("keydown", function (event) {
+  if (event.key === "Escape") {
+    closeModal();
   }
-);
-
+});
 
 /* =========================================================
-   GRADING
+   GRADING MODALS
    ========================================================= */
 
 const gradingSheets = {
-
   D: {
-
-    title:
-      "Takeoff — Départ",
-
-    image:
-      "grading-takeoff.png",
-
-    intro:
-      `
-      Le critère Takeoff analyse la façon
-      dont la performance est initiée :
-      trajectoire, impulsion, coordination,
-      stabilité et préparation.
-      `
-
+    title: "Takeoff — Départ",
+    image: "grading-takeoff.png",
+    intro: `
+      Le critère Takeoff analyse la manière dont la performance est initiée :
+      trajectoire, impulsion, coordination, stabilité et préparation.
+    `
   },
-
 
   T: {
-
-    title:
-      "Trick — Phase aérienne",
-
-    image:
-      "grading-trick.png",
-
-    intro:
-      `
-      Le critère Trick analyse la qualité
-      de la phase aérienne :
-      rotations, lignes, position du corps,
-      fluidité, ouverture et repères.
-      `
-
+    title: "Trick — Phase aérienne",
+    image: "grading-trick.png",
+    intro: `
+      Le critère Trick analyse la qualité de la phase aérienne :
+      rotations, lignes, position du corps, fluidité, ouverture et repères.
+    `
   },
 
-
   E: {
-
-    title:
-      "Entry — Entrée à l'eau",
-
-    image:
-      "grading-entry.png",
-
-    intro:
-      `
-      Le critère Entry analyse la phase
-      terminale de la performance :
-      angle, axe, alignement,
-      position des bras et des jambes
-      et qualité de l'entrée.
-      `
-
+    title: "Entry — Entrée à l'eau",
+    image: "grading-entry.png",
+    intro: `
+      Le critère Entry analyse la phase terminale de la performance :
+      angle, axe, alignement, contrôle final et qualité de l'entrée.
+    `
   }
-
 };
 
+document.querySelectorAll(".grading-card[data-sheet]").forEach(card => {
+  card.addEventListener("click", function () {
+    const key = this.dataset.sheet;
+    const sheet = gradingSheets[key];
 
-document
-  .querySelectorAll(
-    ".grading-card[data-sheet]"
-  )
-  .forEach(card => {
+    if (!sheet) return;
 
-    card.addEventListener(
-      "click",
-      function () {
+    openModal(`
+      <div class="modal-inner">
 
-        const key =
-          this.dataset.sheet;
+        <span class="overline">GRILLE EAH</span>
 
+        <h2>${sheet.title}</h2>
 
-        const sheet =
-          gradingSheets[key];
+        <p>${sheet.intro}</p>
 
+        <div class="modal-note">
+          <h3>Lecture de la grille</h3>
+          <p>
+            Chaque critère comporte 5 éléments d'évaluation.
+            Chaque élément peut valoir jusqu'à 2 points,
+            soit un total maximal de <strong>10 / 10</strong> pour le bloc.
+          </p>
+        </div>
 
-        if (!sheet) {
-          return;
-        }
+        <img src="${sheet.image}" alt="${sheet.title}" class="modal-image">
 
+        <div class="modal-note">
+          <h3>Règle de calcul de la note EAH finale</h3>
 
-        openModal(
-          `
-          <div class="modal-inner">
+          <p>
+            La note finale EAH ne repose pas sur une moyenne simple.
+          </p>
 
-            <span class="overline">
-              GRILLE EAH
-            </span>
+          <p>
+            <strong>Règle actuelle :</strong><br>
+            • si la note la plus basse apparaît au moins 2 fois, la note finale = cette note ;<br>
+            • si la note la plus basse est isolée, on lui ajoute +0,5 point.
+          </p>
 
-            <h2>
-              ${sheet.title}
-            </h2>
+          <p>
+            <strong>Exemple 1 :</strong> 9 / 9 / 8 → la note la plus basse est 8, elle est isolée,
+            donc la note finale est <strong>8,5</strong>.
+          </p>
 
-
-            <p>
-              ${sheet.intro}
-            </p>
-
-
-            <div class="modal-note">
-
-              <h3>
-                Comment la note est-elle calculée ?
-              </h3>
-
-              <p>
-                Chaque critère possède
-                jusqu'à 5 items d'évaluation.
-              </p>
-
-              <p>
-                Chaque item peut apporter
-                jusqu'à 2 points.
-              </p>
-
-              <p>
-                5 items totalement validés
-                donnent donc
-                <strong>10 / 10</strong>.
-              </p>
-
-            </div>
-
-
-            <img
-              src="${sheet.image}"
-              alt="${sheet.title}"
-              class="modal-image"
-            >
-
-
-            <div class="modal-note">
-
-              <h3>
-                Calcul du résultat global
-              </h3>
-
-              <p>
-                Les trois notes
-                D, T et E
-                sont ensuite réunies.
-              </p>
-
-              <p>
-                <strong>
-                  Note globale =
-                  (D + T + E) ÷ 3
-                </strong>
-              </p>
-
-              <p>
-                Exemple :
-                D = 7,
-                T = 8,
-                E = 6.
-              </p>
-
-              <p>
-                (7 + 8 + 6) ÷ 3 =
-                <strong>7 / 10</strong>.
-              </p>
-
-              <p>
-                Si la moyenne produit
-                une décimale,
-                elle peut être arrondie
-                à l'entier le plus proche
-                pour correspondre
-                à l'échelle EAH de 0 à 10.
-              </p>
-
-            </div>
-
-          </div>
-          `
-        );
-
-      }
-    );
-
+          <p>
+            <strong>Exemple 2 :</strong> 8 / 8 / 9 → la note la plus basse est 8, elle apparaît au moins 2 fois,
+            donc la note finale reste <strong>8</strong>.
+          </p>
+        </div>
+      </div>
+    `);
   });
-
+});
 
 /* =========================================================
    POPULATION
    ========================================================= */
 
-/*
-  IMPORTANT :
-
-  Les statistiques sont actuellement
-  mises à 0 lorsqu'il n'y a pas encore
-  de Grade Report enregistré.
-
-  Tu pourras ensuite connecter ces données
-  automatiquement à Google Sheets /
-  Apps Script.
-*/
-
-
 const dives = [
-
   {
     code: "101A",
-
-    name:
-      "Plongeon avant tendu",
-
-    discipline:
-      "Plongeon olympique",
-
-    group:
-      "Avant",
-
-    height:
-      "Variable",
-
-    description:
-      "Plongeon avant réalisé en position tendue.",
-
+    name: "Plongeon avant tendu",
+    discipline: "Plongeon olympique",
+    group: "Avant",
+    height: "Variable",
+    description: "Plongeon avant réalisé en position tendue.",
     characteristics: [
       "Groupe : avant",
       "Position : tendue",
@@ -501,29 +214,18 @@ const dives = [
       "Entrée : tête en premier",
       "Discipline : plongeon olympique"
     ],
-
-    stats: []
+    stats: [
+      { height: "1 m", people: "0", score: "Aucune donnée enregistrée" }
+    ]
   },
-
 
   {
     code: "201A",
-
-    name:
-      "Plongeon arrière tendu",
-
-    discipline:
-      "Plongeon olympique",
-
-    group:
-      "Arrière",
-
-    height:
-      "Variable",
-
-    description:
-      "Plongeon arrière réalisé en position tendue.",
-
+    name: "Plongeon arrière tendu",
+    discipline: "Plongeon olympique",
+    group: "Arrière",
+    height: "Variable",
+    description: "Plongeon arrière réalisé en position tendue.",
     characteristics: [
       "Groupe : arrière",
       "Position : tendue",
@@ -531,762 +233,411 @@ const dives = [
       "Entrée : tête en premier",
       "Discipline : plongeon olympique"
     ],
-
-    stats: []
+    stats: [
+      { height: "3 m", people: "0", score: "Aucune donnée enregistrée" }
+    ]
   },
-
 
   {
     code: "301A",
-
-    name:
-      "Plongeon renversé tendu",
-
-    discipline:
-      "Plongeon olympique",
-
-    group:
-      "Renversé",
-
-    height:
-      "Variable",
-
-    description:
-      "Plongeon du groupe renversé en position tendue.",
-
+    name: "Plongeon renversé tendu",
+    discipline: "Plongeon olympique",
+    group: "Renversé",
+    height: "Variable",
+    description: "Plongeon du groupe renversé en position tendue.",
     characteristics: [
       "Groupe : renversé",
       "Position : tendue",
       "Discipline : plongeon olympique"
     ],
-
-    stats: []
+    stats: [
+      { height: "5 m", people: "0", score: "Aucune donnée enregistrée" }
+    ]
   },
-
 
   {
     code: "401A",
-
-    name:
-      "Plongeon retourné tendu",
-
-    discipline:
-      "Plongeon olympique",
-
-    group:
-      "Retourné",
-
-    height:
-      "Variable",
-
-    description:
-      "Plongeon du groupe retourné en position tendue.",
-
+    name: "Plongeon retourné tendu",
+    discipline: "Plongeon olympique",
+    group: "Retourné",
+    height: "Variable",
+    description: "Plongeon du groupe retourné en position tendue.",
     characteristics: [
       "Groupe : retourné",
       "Position : tendue",
       "Discipline : plongeon olympique"
     ],
-
-    stats: []
+    stats: [
+      { height: "10 m", people: "0", score: "Aucune donnée enregistrée" }
+    ]
   },
-
 
   {
     code: "DODS-01",
-
-    name:
-      "Døds classique",
-
-    discipline:
-      "Freestyle / Døds",
-
-    group:
-      "Døds",
-
-    height:
-      "Variable",
-
-    description:
-      "Døds classique évalué selon les conditions spécifiques du référentiel EAH.",
-
+    name: "Døds classique",
+    discipline: "Freestyle / Døds",
+    group: "Døds",
+    height: "Variable",
+    description: "Døds classique évalué selon les conditions spécifiques du référentiel EAH.",
     characteristics: [
       "Discipline : Freestyle / Døds",
       "Groupe : Døds",
       "Entrée spécifique",
       "Tolérances adaptées à la discipline"
     ],
-
-    stats: []
+    stats: [
+      { height: "10 m", people: "0", score: "Aucune donnée enregistrée" }
+    ]
   },
-
 
   {
     code: "FREE-01",
-
-    name:
-      "Freestyle libre",
-
-    discipline:
-      "Freestyle / Døds",
-
-    group:
-      "Freestyle",
-
-    height:
-      "Variable",
-
-    description:
-      "Figure freestyle évaluée selon la technique annoncée.",
-
+    name: "Freestyle libre",
+    discipline: "Freestyle / Døds",
+    group: "Freestyle",
+    height: "Variable",
+    description: "Figure freestyle évaluée selon la technique annoncée.",
     characteristics: [
       "Discipline : Freestyle / Døds",
       "Groupe : Freestyle",
       "Technique annoncée prise en compte",
       "Tolérances spécifiques"
     ],
-
-    stats: []
+    stats: [
+      { height: "Variable", people: "0", score: "Aucune donnée enregistrée" }
+    ]
   },
-
 
   {
     code: "HD-01",
-
-    name:
-      "Rotation avant High Diving",
-
-    discipline:
-      "High Diving",
-
-    group:
-      "Avant",
-
-    height:
-      "10 m et plus",
-
-    description:
-      "Exemple de figure de rotation avant en High Diving.",
-
+    name: "Rotation avant High Diving",
+    discipline: "High Diving",
+    group: "Avant",
+    height: "10 m et plus",
+    description: "Exemple de figure de rotation avant en High Diving.",
     characteristics: [
       "Discipline : High Diving",
       "Groupe : avant",
       "Hauteur : 10 m et plus",
-      "Difficulté dépendante de la figure et de la hauteur"
+      "Difficulté liée à la figure et à la hauteur"
     ],
-
-    stats: []
+    stats: [
+      { height: "20 m", people: "0", score: "Aucune donnée enregistrée" }
+    ]
   },
-
 
   {
     code: "ANGE-01",
-
-    name:
-      "Saut de l'ange",
-
-    discipline:
-      "Saut de l'ange",
-
-    group:
-      "Ange",
-
-    height:
-      "Variable",
-
-    description:
-      "Saut de l'ange évalué selon la trajectoire, la posture et l'entrée.",
-
+    name: "Saut de l'ange",
+    discipline: "Saut de l'ange",
+    group: "Ange",
+    height: "Variable",
+    description: "Saut de l'ange évalué selon la trajectoire, la posture et l'entrée.",
     characteristics: [
       "Discipline : saut de l'ange",
       "Groupe : ange",
       "Posture contrôlée",
       "Angle d'entrée adapté au référentiel EAH"
     ],
-
-    stats: []
+    stats: [
+      { height: "Variable", people: "0", score: "Aucune donnée enregistrée" }
+    ]
   }
-
 ];
-
 
 /* =========================================================
    POPULATION ELEMENTS
    ========================================================= */
 
-const searchDive =
-  document.getElementById(
-    "searchDive"
-  );
-
-const disciplineFilter =
-  document.getElementById(
-    "disciplineFilter"
-  );
-
-const groupFilter =
-  document.getElementById(
-    "groupFilter"
-  );
-
-const populationResults =
-  document.getElementById(
-    "populationResults"
-  );
-
+const searchDive = document.getElementById("searchDive");
+const disciplineFilter = document.getElementById("disciplineFilter");
+const groupFilter = document.getElementById("groupFilter");
+const populationResults = document.getElementById("populationResults");
 
 /* =========================================================
    ESCAPE HTML
    ========================================================= */
 
 function escapeHTML(value) {
-
   return String(value)
-    .replace(
-      /&/g,
-      "&amp;"
-    )
-    .replace(
-      /</g,
-      "&lt;"
-    )
-    .replace(
-      />/g,
-      "&gt;"
-    )
-    .replace(
-      /"/g,
-      "&quot;"
-    )
-    .replace(
-      /'/g,
-      "&#039;"
-    );
-
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;")
+    .replace(/'/g, "&#039;");
 }
-
 
 /* =========================================================
    GROUP FILTER
    ========================================================= */
 
 function populateGroupFilter() {
+  if (!groupFilter) return;
 
-  if (!groupFilter) {
-    return;
-  }
-
-
-  const groups =
-    [
-      ...new Set(
-        dives.map(
-          dive => dive.group
-        )
-      )
-    ]
-    .sort();
-
+  const groups = [...new Set(dives.map(dive => dive.group))].sort();
 
   groups.forEach(group => {
-
-    const option =
-      document.createElement(
-        "option"
-      );
-
-
-    option.value =
-      group;
-
-
-    option.textContent =
-      group;
-
-
-    groupFilter.appendChild(
-      option
-    );
-
+    const option = document.createElement("option");
+    option.value = group;
+    option.textContent = group;
+    groupFilter.appendChild(option);
   });
-
 }
 
-
 populateGroupFilter();
-
 
 /* =========================================================
    DIVE DETAILS
    ========================================================= */
 
 function showDiveDetails(code) {
+  const dive = dives.find(item => item.code === code);
 
-  const dive =
-    dives.find(
-      item =>
-        item.code === code
-    );
+  if (!dive) return;
 
+  const characteristicsHTML = dive.characteristics
+    .map(item => `<li>${escapeHTML(item)}</li>`)
+    .join("");
 
-  if (!dive) {
-    return;
-  }
-
-
-  const characteristicsHTML =
-    dive.characteristics
-      .map(
-        item =>
-          `
-          <li>
-            ${escapeHTML(item)}
-          </li>
-          `
-      )
-      .join("");
-
-
-  let statsHTML;
-
-
-  if (
-    !dive.stats
-    ||
-    dive.stats.length === 0
-  ) {
-
-    statsHTML =
-      `
+  const statsHTML = dive.stats
+    .map(stat => `
       <tr>
-
-        <td>
-          —
-        </td>
-
-        <td>
-          0
-        </td>
-
-        <td>
-          Aucune donnée enregistrée
-        </td>
-
+        <td>${escapeHTML(stat.height)}</td>
+        <td>${escapeHTML(stat.people)}</td>
+        <td>${escapeHTML(stat.score)}</td>
       </tr>
-      `;
+    `)
+    .join("");
 
-  }
-
-  else {
-
-    statsHTML =
-      dive.stats
-        .map(
-          stat =>
-            `
-            <tr>
-
-              <td>
-                ${escapeHTML(stat.height)}
-              </td>
-
-              <td>
-                ${escapeHTML(stat.people)}
-              </td>
-
-              <td>
-                ${escapeHTML(stat.score)}
-              </td>
-
-            </tr>
-            `
-        )
-        .join("");
-
-  }
-
-
-  openModal(
-    `
+  openModal(`
     <div class="modal-inner">
+      <span class="overline">RÉFÉRENTIEL POPULATION</span>
 
-      <span class="overline">
-        RÉFÉRENTIEL POPULATION
-      </span>
+      <h2>${escapeHTML(dive.name)}</h2>
 
-      <h2>
-        ${escapeHTML(dive.name)}
-      </h2>
-
-
-      <p>
-        <strong>Code :</strong>
-        ${escapeHTML(dive.code)}
-      </p>
-
-
-      <p>
-        <strong>Discipline :</strong>
-        ${escapeHTML(dive.discipline)}
-      </p>
-
-
-      <p>
-        <strong>Groupe :</strong>
-        ${escapeHTML(dive.group)}
-      </p>
-
-
-      <p>
-        <strong>Hauteur :</strong>
-        ${escapeHTML(dive.height)}
-      </p>
-
-
-      <p>
-        ${escapeHTML(dive.description)}
-      </p>
-
+      <p><strong>Code :</strong> ${escapeHTML(dive.code)}</p>
+      <p><strong>Discipline :</strong> ${escapeHTML(dive.discipline)}</p>
+      <p><strong>Groupe :</strong> ${escapeHTML(dive.group)}</p>
+      <p><strong>Hauteur :</strong> ${escapeHTML(dive.height)}</p>
+      <p>${escapeHTML(dive.description)}</p>
 
       <div class="modal-note">
-
-        <h3>
-          Caractéristiques
-        </h3>
-
+        <h3>Caractéristiques</h3>
         <ul class="modal-list">
-
           ${characteristicsHTML}
-
         </ul>
-
       </div>
 
-
       <div class="modal-note">
-
-        <h3>
-          Population EAH
-        </h3>
-
+        <h3>Population EAH</h3>
         <p>
-          Nombre de personnes
-          ayant obtenu un grading
-          sur cette figure,
+          Nombre de personnes ayant obtenu un grading sur cette figure,
           réparties par hauteur.
         </p>
 
-
         <div class="stats-table-wrapper">
-
           <table class="stats-table">
-
             <thead>
-
               <tr>
-
-                <th>
-                  Hauteur
-                </th>
-
-                <th>
-                  Personnes
-                </th>
-
-                <th>
-                  Note / résultat
-                </th>
-
+                <th>Hauteur</th>
+                <th>Personnes</th>
+                <th>Note / résultat</th>
               </tr>
-
             </thead>
-
-
             <tbody>
-
               ${statsHTML}
-
             </tbody>
-
           </table>
-
         </div>
-
       </div>
 
-
       <p class="small-note">
-        Ces statistiques pourront être
-        mises à jour automatiquement
+        Ces statistiques pourront être mises à jour automatiquement
         à partir des Grade Reports EAH.
       </p>
-
     </div>
-    `
-  );
-
+  `);
 }
-
 
 /* =========================================================
    POPULATION DISPLAY
    ========================================================= */
 
 function displayPopulation() {
+  if (!searchDive || !disciplineFilter || !groupFilter || !populationResults) return;
 
-  if (
-    !searchDive
-    ||
-    !disciplineFilter
-    ||
-    !groupFilter
-    ||
-    !populationResults
-  ) {
+  const search = searchDive.value.toLowerCase().trim();
+  const discipline = disciplineFilter.value;
+  const selectedGroup = groupFilter.value;
 
-    return;
+  const filtered = dives.filter(dive => {
+    const searchable = (
+      dive.code + " " +
+      dive.name + " " +
+      dive.discipline + " " +
+      dive.group
+    ).toLowerCase();
 
-  }
+    const matchesSearch = !search || searchable.includes(search);
+    const matchesDiscipline = !discipline || dive.discipline === discipline;
+    const matchesGroup = !selectedGroup || dive.group === selectedGroup;
 
+    return matchesSearch && matchesDiscipline && matchesGroup;
+  });
 
-  const search =
-    searchDive.value
-      .toLowerCase()
-      .trim();
-
-
-  const discipline =
-    disciplineFilter.value;
-
-
-  const selectedGroup =
-    groupFilter.value;
-
-
-  const filtered =
-    dives.filter(dive => {
-
-      const searchable =
-        (
-          dive.code
-          + " "
-          + dive.name
-          + " "
-          + dive.discipline
-          + " "
-          + dive.group
-        )
-        .toLowerCase();
-
-
-      const matchesSearch =
-        !search
-        ||
-        searchable.includes(
-          search
-        );
-
-
-      const matchesDiscipline =
-        !discipline
-        ||
-        dive.discipline
-        ===
-        discipline;
-
-
-      const matchesGroup =
-        !selectedGroup
-        ||
-        dive.group
-        ===
-        selectedGroup;
-
-
-      return (
-        matchesSearch
-        &&
-        matchesDiscipline
-        &&
-        matchesGroup
-      );
-
-    });
-
-
-  if (
-    filtered.length === 0
-  ) {
-
-    populationResults.innerHTML =
-      `
+  if (filtered.length === 0) {
+    populationResults.innerHTML = `
       <div class="empty-result">
-        Aucun plongeon trouvé
-        avec ces critères.
+        Aucun plongeon trouvé avec ces critères.
       </div>
-      `;
-
-
+    `;
     return;
-
   }
 
+  populationResults.innerHTML = filtered.map(dive => `
+    <article class="population-result">
+      <div class="population-code">${escapeHTML(dive.code)}</div>
 
-  populationResults.innerHTML =
-    filtered
-      .map(
-        dive =>
-          `
-          <article
-            class="population-result"
-          >
+      <div>
+        <button class="dive-link" type="button" data-dive-code="${escapeHTML(dive.code)}">
+          ${escapeHTML(dive.name)}
+        </button>
+        <br>
+        <span>${escapeHTML(dive.discipline)}</span>
+      </div>
 
-            <div
-              class="population-code"
-            >
-              ${escapeHTML(dive.code)}
-            </div>
+      <div>
+        <span>Groupe / hauteur</span>
+        <br>
+        ${escapeHTML(dive.group)} · ${escapeHTML(dive.height)}
+      </div>
+    </article>
+  `).join("");
 
-
-            <div>
-
-              <button
-                class="dive-link"
-                type="button"
-                data-dive-code="${escapeHTML(dive.code)}"
-              >
-                ${escapeHTML(dive.name)}
-              </button>
-
-              <br>
-
-              <span>
-                ${escapeHTML(dive.discipline)}
-              </span>
-
-            </div>
-
-
-            <div>
-
-              <span>
-                Groupe / hauteur
-              </span>
-
-              <br>
-
-              ${escapeHTML(dive.group)}
-
-              ·
-
-              ${escapeHTML(dive.height)}
-
-            </div>
-
-          </article>
-          `
-      )
-      .join("");
-
-
-  document
-    .querySelectorAll(
-      ".dive-link"
-    )
-    .forEach(button => {
-
-      button.addEventListener(
-        "click",
-        function () {
-
-          showDiveDetails(
-            this.dataset.diveCode
-          );
-
-        }
-      );
-
+  document.querySelectorAll(".dive-link").forEach(button => {
+    button.addEventListener("click", function () {
+      showDiveDetails(this.dataset.diveCode);
     });
-
+  });
 }
-
 
 if (searchDive) {
-
-  searchDive.addEventListener(
-    "input",
-    displayPopulation
-  );
-
+  searchDive.addEventListener("input", displayPopulation);
 }
-
 
 if (disciplineFilter) {
-
-  disciplineFilter.addEventListener(
-    "change",
-    displayPopulation
-  );
-
+  disciplineFilter.addEventListener("change", displayPopulation);
 }
-
 
 if (groupFilter) {
-
-  groupFilter.addEventListener(
-    "change",
-    displayPopulation
-  );
-
+  groupFilter.addEventListener("change", displayPopulation);
 }
-
 
 displayPopulation();
 
+/* =========================================================
+   CONSEILS EAH
+   ========================================================= */
+
+const adviceTopics = {
+  avant: {
+    title: "Salto avant",
+    description: `
+      Le salto avant demande une trajectoire claire, un bon engagement du départ
+      et une lecture précise de l'ouverture. En EAH, on analysera notamment
+      la qualité du Takeoff, la fluidité de rotation et le contrôle de l'entrée.
+    `
+  },
+
+  arriere: {
+    title: "Salto arrière",
+    description: `
+      Le salto arrière demande un bon repère de départ, une poussée propre
+      et une maîtrise de l'axe. En EAH, une attention particulière est portée
+      à la stabilité du départ, à la continuité de la rotation et à la qualité du contrôle final.
+    `
+  },
+
+  renverse: {
+    title: "Renversé",
+    description: `
+      Le renversé impose une trajectoire cohérente, une bonne élévation
+      et un retour maîtrisé. On surveille particulièrement la verticalité,
+      les repères dans l'espace et l'ouverture.
+    `
+  },
+
+  retourne: {
+    title: "Retourné",
+    description: `
+      Le retourné demande un engagement précis et une bonne organisation
+      de la phase aérienne. La lecture EAH met l'accent sur la qualité
+      du départ, les lignes et le contrôle du corps.
+    `
+  },
+
+  vrille: {
+    title: "Vrille",
+    description: `
+      La vrille demande une grande précision dans l'axe, la dissociation
+      et la continuité du geste. En EAH, l'évaluation surveille le lancement,
+      la régularité et la stabilité de l'exécution jusqu'à l'entrée.
+    `
+  }
+};
+
+document.querySelectorAll(".advice-card[data-advice]").forEach(card => {
+  card.addEventListener("click", function (event) {
+    const topicKey = this.dataset.advice;
+    const topic = adviceTopics[topicKey];
+
+    if (!topic) return;
+
+    openModal(`
+      <div class="modal-inner">
+        <span class="overline">CONSEIL EAH</span>
+        <h2>${topic.title}</h2>
+
+        <p>${topic.description}</p>
+
+        <div class="video-placeholder">
+          <strong>Vidéo à ajouter :</strong><br>
+          Tu peux ensuite intégrer ici un lien vidéo YouTube, Drive ou autre support
+          correspondant à ce thème.
+        </div>
+
+        <div class="modal-note">
+          <h3>Comment modifier cette rubrique</h3>
+          <p>
+            Pour changer le texte, modifie l'objet <strong>adviceTopics</strong>
+            dans le fichier <strong>script.js</strong>.
+          </p>
+          <p>
+            Pour ajouter une vidéo réelle dans le futur, tu pourras remplacer
+            le bloc “Vidéo à ajouter” par un lecteur vidéo ou un lien intégré.
+          </p>
+        </div>
+      </div>
+    `);
+  });
+});
 
 /* =========================================================
    FORMULAIRE
    ========================================================= */
 
-const gradingForm =
-  document.getElementById(
-    "gradingForm"
-  );
+const gradingForm = document.getElementById("gradingForm");
+const formMessage = document.getElementById("formMessage");
 
-const formMessage =
-  document.getElementById(
-    "formMessage"
-  );
+if (gradingForm && formMessage) {
+  gradingForm.addEventListener("submit", function (event) {
+    event.preventDefault();
 
-
-if (
-  gradingForm
-  &&
-  formMessage
-) {
-
-  gradingForm.addEventListener(
-    "submit",
-    function (event) {
-
-      event.preventDefault();
-
-
-      formMessage.innerHTML =
-        `
-        Le formulaire du site fonctionne
-        visuellement.
-
-        <br><br>
-
-        L'étape suivante consiste
-        à le connecter à ton
-        Google Apps Script
-        pour enregistrer réellement
-        les demandes de grading.
-        `;
-
-    }
-  );
-
+    formMessage.innerHTML = `
+      Le formulaire du site fonctionne visuellement.
+      <br><br>
+      L'étape suivante consiste à le connecter à ton Google Apps Script
+      pour enregistrer réellement les demandes de grading.
+    `;
+  });
 }
